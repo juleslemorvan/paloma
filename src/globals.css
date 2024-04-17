@@ -1,0 +1,27 @@
+@import url('https://fonts.cdnfonts.com/css/f25-executive');
+
+
+body {
+    flex: 1;
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    
+    
+}
+
+:root {
+    display: flex;
+   
+  
+}
+
+html {
+    scroll-behavior: smooth;
+   
+    
+
+}
+

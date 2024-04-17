@@ -1,0 +1,60 @@
+{
+  "navbar": {
+    "products": "Our products",
+    "actuality": "Actuality",
+    "contact": "Contact"
+  },
+
+  "cocktails": {
+    "libelula": {
+      "texts": {
+        "text1": "Libélula Tequila is a handcrafted Tequila in small batches using traditional production methods. The tequila is made from 100% blue Weber agave sourced from the highlands of Jalisco, Mexico, where the volcanic soil and optimal climate contribute to the agave's rich flavor profile",
+        "text2": "What make it special is that Tequila Libelula is a special blend of 80% tequila blanco and 20% tequila reposado that accentuates the best of both spirits, creating the perfect harmony.",
+        "text3": "It’s the best of tradition and ingenuity to create a beautifully balanced spirit for sipping or mixing.",
+        "text4": "Libélula Tequila is renowned for its smooth and balanced flavor profile. It boasts subtle notes of sweet agave, citrus, and hints of spice, with a velvety texture that coats the palate.",
+        "text5": "Whether enjoyed neat, on the rocks, or as the base for cocktails, Libélula Tequila offers a versatile drinking experience. Its well-rounded flavor profile makes it suitable for sipping slowly to savor its complexity or mixing into cocktails to enhance their flavors."
+      }
+    },
+    "banhez": {
+      "texts": {
+        "text1": "Banhez Mezcal is crafted using traditional methods passed down through generations in Oaxaca, Mexico. Its authentic production process, including hand-harvesting agave and artisanal distillation techniques, appeals to consumers seeking an authentic mezcal experience.",
+        "text2": "Banhez offers a range of mezcal expressions, each showcasing the unique flavors and characteristics of different agave varietals and production techniques.",
+        "text3": "Banhez Mezcal is owned and produce by a COOP of   55 families of Mezcaleros from various communities within the region of Ejutla, South of Oaxaca. Each Mezcalero is contributing to the diversity and quality of mezcal produced.",
+        "text4": "Banhez Ensemble: Comprised of 90% Espadín and 10% Barril agaves, this mezcal is delightfully mild, floral and fruity (pineapple, banana). Banhez Ensamble is perfect for first-time mezcal tasters and wonderful for cocktail innovation."
+      }
+    },
+    "odvi": {
+      "texts": {
+        "text1": "ODVI Armagnac is renowned for offering an Armagnac made for the  cocktail industry.",
+        "text2": "ODVI has worked on different blends of eaux-de-vie to create a harmonious, complex and balance final product that offers alternatives and encourage bartenders to explore more the Brandy category.",
+        "text3": "ODVI offers a range of Armagnac expressions to suit different preferences and occasions. Whether you prefer a young aged and vibrant Armagnac or a more floral fruity,  ODVI has a variety of options to choose from, each showcasing the brand's commitment to quality and excellence.",
+        "text4": "ODVI Blanche is an unaged Armagnac at 45% Abv. Distilled in the southwest of France with a unique blend of 55% Baco and 45% Ugni Blanc, this Blanche Armagnac captures the very essence of the grape without the influence of oak. Briefly matured in glass demijohns and stainless steel tanks, it shines with freshness and fruity intensity.",
+        "text5": "ODVI aged ODVI Armagnac (pronounced eau-de-vie) is a living link between history and modernity. Made in Gascony, France, from a blend of 3 different grapes (45% Baco, 40% Ugni Blanc, and 15% Folle Blanche) ODVI Armagnac is fresh, fruit-forward, and peppery with notes of prune and peach."
+      },
+      "ranges": {
+        "range1":"ODVI Blanche is an unaged Armagnac at 45% Abv. Distilled in the southwest of France with a unique blend of 55% Baco and 45% Ugni Blanc, this Blanche Armagnac captures the very essence of the grape without the influence of oak. Briefly matured in glass demijohns and stainless steel tanks, it shines with freshness and fruity intensity.",
+        "range2": "ODVI aged ODVI Armagnac (pronounced eau-de-vie) is a living link between history and modernity. Made in Gascony, France, from a blend of 3 different grapes (45% Baco, 40% Ugni Blanc, and 15% Folle Blanche) ODVI Armagnac is fresh, fruit-forward, and peppery with notes of prune and peach."
+      }
+    }
+  }
+}
+
+
+	 
+			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
