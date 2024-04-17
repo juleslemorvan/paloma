@@ -30,7 +30,7 @@ export const VideoSection = () => {
           color="whitesmoke"
           fontFamily="revert"
         >
-          hello, we'll be at Las Vegas in 8th December to present out new
+          hello, we&apos;ll be at Las Vegas in 8th December to present out new
           product !
         </Text>
         <IconButton

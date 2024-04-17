@@ -24,7 +24,7 @@ const Press = () => {
     >
       <Flex direction="column" w="300px">
           <Image src='../ny-logo.png' h={"70px"} />
-          <Text>Among our favorites… was our No. 8 bottle, the floral, herbal Banhez, made from the cuishe agave, which might explain its quirky fresh, meadowy feeling.</Text>
+          <Text >Among our favorites… was our No. 8 bottle, the floral, herbal Banhez, made from the cuishe agave, which might explain its quirky fresh, meadowy feeling.</Text>
       </Flex>
 
        <Flex >
