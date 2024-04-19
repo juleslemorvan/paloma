@@ -10,7 +10,7 @@ const Footer = () => {
           
         }}
     >
-Footer
+c'est le footer
     </section>
   )
 }
