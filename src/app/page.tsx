@@ -8,13 +8,13 @@ import { VideoSection } from "@/Components/VideoSection/VideoSection";
 
 export default function Home() {
   return (
-    <main style={{ overflow: "scroll", flex: "1" }}>
+    <main style={{ flex: "1" }}>
       <Header />
-     <VideoSection />
+      <VideoSection />
       <CocktailsSection />
       <Press />
       <Form />
-      <Footer/>  
+      <Footer />
     </main>
   );
 }

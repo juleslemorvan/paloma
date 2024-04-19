@@ -3,19 +3,22 @@
 import {
   Button,
   Flex,
-  Heading,
   Image,
   Stack,
   Text,
   SlideFade,
   Fade,
+  Box,
 } from "@chakra-ui/react";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useInViewport } from "react-in-viewport";
 import { FaInstagram } from "react-icons/fa";
 
-
+type Product = {
+  name: string;
+  icon: React.ReactElement;
+};
 
 type CocktailDetailsProps = {
   colorTheme: string;
@@ -25,9 +28,10 @@ type CocktailDetailsProps = {
   texts: string[];
   mainImage: string;
   carouselImages: string[];
-  products: string[];
+  products: Product[];
   webUrl: string;
   instaUrl: string;
+  award?: string;
 };
 
 const CocktailDetails = ({
@@ -41,67 +45,111 @@ const CocktailDetails = ({
   products,
   webUrl,
   instaUrl,
+  award,
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
   const isVisible = inViewport || enterCount > 0;
 
   return (
-    <Stack p={10} w="100%" justifyContent="center" alignItems="center" bg={colorTheme}>
-      <Image mb={10} src={brandLogo} w="200px" h="90px" />
-      <Flex direction="row" alignItems="center">
-        <Flex flex={1}>
+    <Stack
+      py={10}
+      w="100%"
+      justifyContent="center"
+      alignItems="center"
+      bg={colorTheme}
+    >
+      <Image
+        mb={5}
+        src={brandLogo}
+        aspectRatio={16 / 9}
+        maxH="150px"
+        objectFit="contain"
+      />
+      <Flex
+        flexDirection={{ base: "column", lg: "row" }}
+        gap={{ base: 10, lg: 0 }}
+        alignItems={{base: "center", lg: "flex-start"}}
+      >
+        <Flex flex={1} px={10}>
           <SlideFade
             in={isVisible}
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
             offsetX="-60px"
           >
-            <Image src={mainImage} h="550px" objectFit="cover" />
+            <Image src={mainImage} w={{ base: "400px" }} objectFit="cover" />
           </SlideFade>
         </Flex>
-        <Flex flex={2}>
+        <Flex
+          minW={{ base: "400px" }}
+          ref={myRef}
+          flex={2}
+          overflow="hidden"
+          px={10}
+        >
           <SlideFade
             in={isVisible}
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
-            offsetX="60px"
+            offsetX="500px"
           >
             <Flex direction="column">
               <Flex flexDir="column" gap={2}>
                 {texts.map((text) => (
-                  <Text key={text} color={colorText} fontFamily={font}>{text}</Text>
-                ))}
-              </Flex>
-              <Flex gap={5} justifyContent="center" p={4}>
-                {products.map((product) => (
-                  <Text key={product} border="1px solid black" borderRadius="5px" p={3}>
-                    {product}
+                  <Text key={text} color={colorText} fontFamily={font}>
+                    {text}
                   </Text>
                 ))}
               </Flex>
               <Flex gap={5} justifyContent="center" p={4}>
-                <Button onClick={() => window.open(webUrl)} background={colorText} color={colorTheme}>
+                {products.map((product, index) => (
+                  <Flex key={product.name}>
+                    {product.icon}
+                    <Text borderRadius="5px" p={3} color={colorText}>
+                      {product.name}
+                    </Text>
+                  </Flex>
+                ))}
+              </Flex>
+              <Box>
+                <Image src={award} />
+              </Box>
+              <Flex gap={5} justifyContent="center" p={4}>
+                <Button
+                  onClick={() => window.open(webUrl)}
+                  background={colorText}
+                  color={colorTheme}
+                >
                   Website
                 </Button>
-                <Button background={colorText} color={colorTheme} onClick={() => window.open(instaUrl)}><FaInstagram size={20} /></Button>
+                <Button
+                  background={colorText}
+                  color={colorTheme}
+                  onClick={() => window.open(instaUrl)}
+                >
+                  <FaInstagram size={20} />
+                </Button>
               </Flex>
             </Flex>
           </SlideFade>
         </Flex>
       </Flex>
-      <Fade
-        in={isVisible}
-        transition={{ enter: { delay: 1, duration: 0.8 } }}
-      >
+      <Fade in={isVisible} transition={{ enter: { delay: 1, duration: 0.8 } }}>
         <Flex
           mt={10}
-          ref={myRef}
           dir="row"
+          flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
           gap={10}
         >
           {carouselImages.map((image) => (
-            <Image key={image} src={image} w="350px" h="300px" objectFit="cover"/>
+            <Image
+              key={image}
+              src={image}
+              w="350px"
+              h="300px"
+              objectFit="cover"
+            />
           ))}
         </Flex>
       </Fade>
@@ -125,7 +173,16 @@ export const CocktailsSection = () => {
         font="'F25 Executive', sans-serif;"
         webUrl="http://google.fr"
         instaUrl="http://google.fr"
-        products={["Reposado 70cl and 1L", "Blanco 70cl and 1L"]}
+        products={[
+          {
+            name: "Reposado 70cl and 1L",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "Blanco 70cl and 1L",
+            icon: <Image src="../../bottle.png" w="35px" color="red" />,
+          },
+        ]}
         texts={[
           t("libelula.texts.text1"),
           t("libelula.texts.text2"),
@@ -147,18 +204,32 @@ export const CocktailsSection = () => {
         font="'F25 Executive', sans-serif;"
         webUrl="http://google.fr"
         instaUrl="http://google.fr"
-        products={["Blanco 70cl, 100cl", "Reposado 70cl, 100cl", "High proof 70cl", "Cristalino 70cl"]}
+        products={[
+          {
+            name: "Blanco 70cl, 100cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "Reposado 70cl, 100cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "High proof 70cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "Cristalino 70cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+        ]}
+        award="../awards-mezcal.png"
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),
           t("banhez.texts.text3"),
           t("banhez.texts.text4"),
         ]}
-        carouselImages={[
-          "../banhez2.jpg",
-          "../banhez3.jpg",
-          "../banhez4.jpg",
-        ]}
+        carouselImages={["../banhez2.jpg", "../banhez3.jpg", "../banhez4.jpg"]}
         mainImage="../mezcal-cocktail.jpg"
         brandLogo="../banhez-logo.png"
       />
@@ -168,7 +239,16 @@ export const CocktailsSection = () => {
         font="'F25 Executive', sans-serif;"
         webUrl="http://google.fr"
         instaUrl="http://google.fr"
-        products={["ODVI Blanche	", "ODVI aged"]}
+        products={[
+          {
+            name: "ODVI Blanche",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "ODVI aged",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+        ]}
         texts={[
           t("odvi.texts.text1"),
           t("odvi.texts.text2"),
@@ -176,11 +256,7 @@ export const CocktailsSection = () => {
           t("odvi.texts.text4"),
           t("odvi.texts.text5"),
         ]}
-        carouselImages={[
-          "../ODVI2.jpg",
-          "../ODVI3.jpg",
-          "../ODVI4.jpg",
-        ]}
+        carouselImages={["../ODVI2.jpg", "../ODVI3.jpg", "../ODVI4.jpg"]}
         mainImage="../ODVI1.jpg"
         brandLogo="../odvi-logo.webp"
       />

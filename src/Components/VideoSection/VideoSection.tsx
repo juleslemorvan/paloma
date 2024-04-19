@@ -1,6 +1,6 @@
 "use client";
 
-import {  Flex, IconButton, Text } from "@chakra-ui/react";
+import { Fade, Flex, IconButton, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -14,7 +14,7 @@ export const VideoSection = () => {
       }}
     >
       <Flex
-        display={{base: isVisible ? 'flex' : 'none'}}
+        display={isVisible ? "flex" : "none"}
         direction="row"
         alignItems="center"
         bg="black"
@@ -44,7 +44,6 @@ export const VideoSection = () => {
         />
       </Flex>
 
-
       <video
         width="100%"
         style={{ height: "100vh", objectFit: "cover" }}
@@ -56,36 +55,39 @@ export const VideoSection = () => {
         <source src="video-banner.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <h1
+
+      <div
         style={{
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
           color: "white",
-          fontSize: "35px",
-          fontFamily: "F25 Executive', sans-serif;",
-          fontWeight: "bold",
         }}
       >
-        Des Spiritueux craft pour le bar.
-      </h1>
-
-      <h3
-        style={{
-          position: "absolute",
-          top: "80%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-          fontSize: "15px",
-          fontFamily: "F25 Executive', sans-serif;",
-          fontWeight: "bold",
-        }}
-      >
-        Co-creation & developpement de marques de spiritieux pour le bar, avec
-        les bartenders{" "}
-      </h3>
+        <Fade in transition={{ enter: { delay: 0.1, duration: 1 } }}>
+          <h1
+            style={{
+              fontSize: "40px",
+              fontFamily: "F25 Executive', sans-serif;",
+              fontWeight: "bold",
+            }}
+          >
+            Des Spiritueux craft pour le bar
+          </h1>
+        </Fade>
+        <Fade in transition={{ enter: { delay: 0.5, duration: 2.3 } }}>
+          <h2
+            style={{
+              fontSize: "20px",
+              fontFamily: "F25 Executive', sans-serif;",
+            }}
+          >
+            Co-creation & developpement de marques de spiritieux pour le bar,
+            avec les bartenders
+          </h2>
+        </Fade>
+      </div>
     </section>
   );
 };
