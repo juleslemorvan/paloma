@@ -196,7 +196,7 @@ export const CocktailsSection = () => {
           "../libelula4.jpg",
         ]}
         mainImage="../libelula1.jpg"
-        brandLogo="../Libelula-logo.png"
+        brandLogo="../libelula-logo.png"
       />
       <CocktailDetails
         colorTheme="#2B3D47"
