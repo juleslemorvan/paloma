@@ -52,7 +52,7 @@ export const NavBar = () => {
           
         </Link>
         <Link href="#contact" fontFamily="F25 Executive', sans-serif;">
-          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+          <Box >
              {t("contact")}
           </Box>
          

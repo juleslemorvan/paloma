@@ -117,11 +117,19 @@ const CocktailDetails = ({
                 ))}
               </Flex>
               
-              <Flex gap={5} justifyContent="center" p={4} alignItems="center">
+             
+              { award2 && ( <Flex direction="row" alignItems="center" color={colorText} gap={5}>
+              <Image src="../medal.png" w={20} h={20}/>
+              <Text fontStyle="italic">"{award2}"</Text>
+              <Image src="../medal2.png" w={20} h={20}/>
+             </Flex>  )}
+
+
+               <Flex gap={5} justifyContent="center" p={4} alignItems="center" flexWrap="wrap">
                 {award && (
-                  <Box w="500px" h="230px">
+                  <Box  >
                 <Image src={award} p={10} />
-              </Box>
+                  </Box>
                 ) } 
                 <Button
                   onClick={() => window.open(webUrl)}
@@ -140,11 +148,7 @@ const CocktailDetails = ({
                   
                 </Button>
               </Flex>
-              { award2 && ( <Flex direction="row" alignItems="center" color={colorText} gap={5}>
-              <Image src="../medal.png" w={20} h={20}/>
-              <Text fontStyle="italic">"{award2}"</Text>
-              <Image src="../medal2.png" w={20} h={20}/>
-             </Flex>  )}
+
               
             </Flex>
           </SlideFade>
