@@ -239,7 +239,7 @@ export const CocktailsSection = () => {
           t("banhez.texts.text4"),
         ]}
         carouselImages={["../Banhez2.jpg", "../Banhez3.jpg", "../Banhez4.jpg"]}
-        mainImage="./banhez1.jpg"
+        mainImage="./Banhez1.jpg"
         brandLogo="../banhez-logo.png"
       />
       <CocktailDetails
