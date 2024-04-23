@@ -12,6 +12,7 @@ import {
   Button,
   Heading,
   Image,
+  Box,
 } from "@chakra-ui/react";
 import ScrollTop from "../scrollTop/scrollTop";
 
@@ -25,10 +26,19 @@ const Form = () => {
         margin: "0px 20px 10px 20px",
         justifyContent: "center",
         alignItems: "center",
+        position:"relative"
       }}
       id="contact"
     >
-      <Flex py={2} flexWrap="wrap" direction="row" justifyContent="center" alignItems="center" >
+      <Box position="absolute" top={6} right={8}><ScrollTop/></Box>
+      
+      <Flex
+        py={2}
+        flexWrap="wrap"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Heading
           as="h2"
           style={{
@@ -38,13 +48,9 @@ const Form = () => {
         >
           Contact us
         </Heading>
-        <Flex justifyContent="flex-end">
-            <ScrollTop/>
-        </Flex>
-        
       </Flex>
 
-      <Stack spacing={5} w={{base:"300px",md:"500px"}}>
+      <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
         <FormControl isRequired>
           <FormLabel htmlFor="first-name">Name</FormLabel>
           <Input
@@ -86,8 +92,7 @@ const Form = () => {
           Send
         </Button>
       </Stack>
-            <Image src="../frise-logo.png" w="500px" h="150px" />
-      
+      <Image src="../frise-logo.png" w="500px" h="150px" />
     </section>
   );
 };
