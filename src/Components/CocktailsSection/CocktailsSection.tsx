@@ -34,6 +34,7 @@ type CocktailDetailsProps = {
   webUrl: string;
   instaUrl: string;
   award?: string;
+  award2?: string;
   
 };
 
@@ -49,6 +50,7 @@ const CocktailDetails = ({
   webUrl,
   instaUrl,
   award,
+  award2,
  
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
@@ -116,9 +118,11 @@ const CocktailDetails = ({
               </Flex>
               
               <Flex gap={5} justifyContent="center" p={4} alignItems="center">
-                <Box>
-                <Image src={award} p={10} w="500px" h="230px"/>
+                {award && (
+                  <Box w="500px" h="230px">
+                <Image src={award} p={10} />
               </Box>
+                ) } 
                 <Button
                   onClick={() => window.open(webUrl)}
                   background={colorText}
@@ -136,10 +140,12 @@ const CocktailDetails = ({
                   
                 </Button>
               </Flex>
-             {/* <Flex direction="row" gap={5}>
-              <FaAward size={23}/>
-              <Text>{award2}</Text>
-             </Flex> */}
+              { award2 && ( <Flex direction="row" alignItems="center" color={colorText} gap={5}>
+              <Image src="../medal.png" w={20} h={20}/>
+              <Text fontStyle="italic">"{award2}"</Text>
+              <Image src="../medal2.png" w={20} h={20}/>
+             </Flex>  )}
+              
             </Flex>
           </SlideFade>
         </Flex>
@@ -231,7 +237,7 @@ export const CocktailsSection = () => {
           },
         ]}
         award="./awards-mezcal.png"
-        
+        award2="3rd mezcal most sold in USA"
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),
