@@ -20,18 +20,19 @@ export const VideoSection = () => {
         bg="black"
         w="100%"
         h="3vh"
-        border="2px solid black"
+        
         p="20px"
       >
         <Text
           justifyContent="center"
+          alignItems="center"
           w="90%"
           align="center"
           color="whitesmoke"
           fontFamily="revert"
+          fontSize={{base: "15px", md:"20px"}}
         >
-          hello, we&apos;ll be at Las Vegas in 8th December to present out new
-          product !
+           Meet us at Bar Covente Berlin | 14th - 16th October 2024
         </Text>
         <IconButton
           onClick={() => setIsVisible(false)}

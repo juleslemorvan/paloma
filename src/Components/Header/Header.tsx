@@ -37,7 +37,7 @@ export const Header = () => {
       </Hide>
 
       <Show below="md">
-        <Image src="../logopaloma.png" w="90px" h="90px" m="0px 20px" />
+        <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
         <IconButton
           aria-label="open mobile menu"
           onClick={onOpen}

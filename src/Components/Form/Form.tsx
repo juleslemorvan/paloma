@@ -28,7 +28,7 @@ const Form = () => {
       }}
       id="contact"
     >
-      <Flex py={2} flexWrap="wrap" direction="column">
+      <Flex py={2} flexWrap="wrap" direction="row" justifyContent="center" alignItems="center" >
         <Heading
           as="h2"
           style={{
@@ -36,12 +36,15 @@ const Form = () => {
             textAlign: "center",
           }}
         >
-          Contact Us
+          Contact us
         </Heading>
-        <Image src="../frise-logo.png" w="500px" h="150px" />
+        <Flex justifyContent="flex-end">
+            <ScrollTop/>
+        </Flex>
+        
       </Flex>
 
-      <Stack spacing={5} w="300px">
+      <Stack spacing={5} w={{base:"300px",md:"500px"}}>
         <FormControl isRequired>
           <FormLabel htmlFor="first-name">Name</FormLabel>
           <Input
@@ -83,8 +86,8 @@ const Form = () => {
           Send
         </Button>
       </Stack>
-
-      <ScrollTop />
+            <Image src="../frise-logo.png" w="500px" h="150px" />
+      
     </section>
   );
 };

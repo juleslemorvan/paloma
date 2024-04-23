@@ -1,8 +1,7 @@
 "use client";
 import { Link } from "@chakra-ui/next-js";
+import NextLink from 'next/link'
 import {
-  Button,
-  ButtonGroup,
   IconButton,
   Image,
   Text,
@@ -11,10 +10,10 @@ import {
   MenuItem,
   MenuList,
   Stack,
+  Box,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
-import LanguageMenu from "../LanguageMenu/LanguageMenu";
-import { useState } from "react";
+
 
 const langToFlag: Record<string, string> = {
   en: "🇬🇧",
@@ -33,20 +32,30 @@ export const NavBar = () => {
       align="center"
       justify={{ base: "space-evenly", md: "space-between" }}
     >
-      <Image src="../logopaloma.png" w="90px" h="90px" m="0px 20px" />
+      <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
       <Stack
         textAlign={{ base: "center" }}
         direction={{ base: "column", md: "row" }}
-        spacing="25px"
+        gap={20}
+        
       >
-        <Link href="#cocktails" fontFamily="F25 Executive', sans-serif;">
-          {t("products")}
+        <Link as={NextLink} href="#cocktails" fontFamily="F25 Executive', sans-serif;" >
+          <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+             {t("brands")}
+          </Box>
+           
         </Link>
         <Link href="#Actuality" fontFamily="F25 Executive', sans-serif;">
-          {t("actuality")}
+          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+            {t("news")}
+          </Box>
+          
         </Link>
         <Link href="#contact" fontFamily="F25 Executive', sans-serif;">
-          {t("contact")}
+          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+             {t("contact")}
+          </Box>
+         
         </Link>
       </Stack>
 

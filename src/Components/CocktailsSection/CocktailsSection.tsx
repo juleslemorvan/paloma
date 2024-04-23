@@ -14,6 +14,8 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useInViewport } from "react-in-viewport";
 import { FaInstagram } from "react-icons/fa";
+import { FaAward } from "react-icons/fa";
+
 
 type Product = {
   name: string;
@@ -32,6 +34,7 @@ type CocktailDetailsProps = {
   webUrl: string;
   instaUrl: string;
   award?: string;
+  
 };
 
 const CocktailDetails = ({
@@ -46,6 +49,7 @@ const CocktailDetails = ({
   webUrl,
   instaUrl,
   award,
+ 
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
@@ -110,10 +114,11 @@ const CocktailDetails = ({
                   </Flex>
                 ))}
               </Flex>
-              <Box>
-                <Image src={award} />
+              
+              <Flex gap={5} justifyContent="center" p={4} alignItems="center">
+                <Box>
+                <Image src={award} p={10} w="500px" h="230px"/>
               </Box>
-              <Flex gap={5} justifyContent="center" p={4}>
                 <Button
                   onClick={() => window.open(webUrl)}
                   background={colorText}
@@ -125,10 +130,16 @@ const CocktailDetails = ({
                   background={colorText}
                   color={colorTheme}
                   onClick={() => window.open(instaUrl)}
+                  leftIcon={<FaInstagram size={20}/>}
                 >
-                  <FaInstagram size={20} />
+                  Instagram
+                  
                 </Button>
               </Flex>
+             {/* <Flex direction="row" gap={5}>
+              <FaAward size={23}/>
+              <Text>{award2}</Text>
+             </Flex> */}
             </Flex>
           </SlideFade>
         </Flex>
@@ -171,17 +182,14 @@ export const CocktailsSection = () => {
         colorTheme="#F1F1F1"
         colorText="#375172"
         font="'F25 Executive', sans-serif;"
-        webUrl="http://google.fr"
-        instaUrl="http://google.fr"
+        webUrl="https://www.libelulatequila.com/"
+        instaUrl="https://www.instagram.com/libelula_tequila/"
         products={[
           {
-            name: "Reposado 70cl and 1L",
+            name: "Joven 40% | 70cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
-          {
-            name: "Blanco 70cl and 1L",
-            icon: <Image src="../../bottle.png" w="35px" color="red" />,
-          },
+          
         ]}
         texts={[
           t("libelula.texts.text1"),
@@ -202,27 +210,28 @@ export const CocktailsSection = () => {
         colorTheme="#2B3D47"
         colorText="#FFFFFF"
         font="'F25 Executive', sans-serif;"
-        webUrl="http://google.fr"
-        instaUrl="http://google.fr"
+        webUrl="https://www.banhezmezcal.com/"
+        instaUrl="https://www.instagram.com/banhezmezcalartesanal/"
         products={[
           {
-            name: "Blanco 70cl, 100cl",
+            name: "Ensamble (Espadin & Barril) 42% | 70cl / 100cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
           {
-            name: "Reposado 70cl, 100cl",
+            name: "Tepeztate 47% | 70cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
           {
-            name: "High proof 70cl",
+            name: "Cuishe 47% | 70cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
           {
-            name: "Cristalino 70cl",
+            name: "Tobala 47% | 70cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
         ]}
-        award="../awards-mezcal.png"
+        award="./awards-mezcal.png"
+        
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),
@@ -230,7 +239,7 @@ export const CocktailsSection = () => {
           t("banhez.texts.text4"),
         ]}
         carouselImages={["../Banhez2.jpg", "../Banhez3.jpg", "../Banhez4.jpg"]}
-        mainImage="../mezcal-cocktail.jpg"
+        mainImage="../banhez1.jpg"
         brandLogo="../banhez-logo.png"
       />
       <CocktailDetails
@@ -241,11 +250,11 @@ export const CocktailsSection = () => {
         instaUrl="http://google.fr"
         products={[
           {
-            name: "ODVI Blanche",
+            name: "ODVI 42% | 70cl / 75cl / 100cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
           {
-            name: "ODVI aged",
+            name: "ODVI Blanche 45% | 70cl / 75cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
         ]}

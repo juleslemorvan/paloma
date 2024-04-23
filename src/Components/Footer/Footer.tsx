@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section
    style={{
-    height:"20vh",
+    height:"15vh",
           background:"black",
           color: "white",
           

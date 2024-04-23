@@ -17,7 +17,7 @@ const Press = () => {
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "space-evenly",
-        alignItems: "center",
+        alignItems: "flex-start",
         gap: "20px",
       }}
       id="press"

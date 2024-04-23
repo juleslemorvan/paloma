@@ -1,15 +1,16 @@
 @import url('https://fonts.cdnfonts.com/css/f25-executive');
 
 
+* {
+    text-decoration: none;
+}
+
 body {
     flex: 1;
     display: flex;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
-    
-    
-    
+    padding: 0;   
 }
 
 :root {
@@ -20,8 +21,5 @@ body {
 
 html {
     scroll-behavior: smooth;
-   
-    
-
 }
 
