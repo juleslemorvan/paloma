@@ -11,6 +11,7 @@ import {
   MenuList,
   Stack,
   Box,
+  Flex,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 
@@ -30,14 +31,17 @@ export const NavBar = () => {
       flex="1"
       direction={{ base: "column", md: "row" }}
       align="center"
-      justify={{ base: "space-evenly", md: "space-between" }}
+     justifyContent="space-between"
     >
+      <Flex >
       <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
+      </Flex>
       <Stack
         textAlign={{ base: "center" }}
+        justifyContent="center"
         direction={{ base: "column", md: "row" }}
-        gap={20}
-        
+        gap={20} 
+        mr={10}
       >
         <Link as={NextLink} href="#cocktails" fontFamily="F25 Executive', sans-serif;" >
           <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
@@ -59,6 +63,7 @@ export const NavBar = () => {
         </Link>
       </Stack>
 
+    <Flex display="flex" >
       <Menu>
         <MenuButton
           border={0}
@@ -79,6 +84,7 @@ export const NavBar = () => {
           </MenuItem>
         </MenuList>
       </Menu>
+      </Flex>
     </Stack>
   );
 };
