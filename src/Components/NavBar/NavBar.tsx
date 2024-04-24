@@ -31,7 +31,7 @@ export const NavBar = () => {
       flex="1"
       direction={{ base: "column", md: "row" }}
       align="center"
-     justifyContent="space-between"
+     justifyContent={{base:"space-around",md:"space-between"}}
     >
       <Flex >
       <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
@@ -41,7 +41,7 @@ export const NavBar = () => {
         justifyContent="center"
         direction={{ base: "column", md: "row" }}
         gap={20} 
-        mr={10}
+        mr={{base:"0",md:"10"}}
       >
         <Link as={NextLink} href="#cocktails" fontFamily="F25 Executive', sans-serif;" >
           <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
@@ -63,7 +63,7 @@ export const NavBar = () => {
         </Link>
       </Stack>
 
-    <Flex display="flex" >
+    <Flex display="flex"  mr={{base:"0px",md:"60px"}}>
       <Menu>
         <MenuButton
           border={0}
