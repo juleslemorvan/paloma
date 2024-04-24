@@ -16,7 +16,6 @@ import { useInViewport } from "react-in-viewport";
 import { FaInstagram } from "react-icons/fa";
 import { FaAward } from "react-icons/fa";
 
-
 type Product = {
   name: string;
   icon: React.ReactElement;
@@ -35,7 +34,6 @@ type CocktailDetailsProps = {
   instaUrl: string;
   award?: string;
   award2?: string;
-  
 };
 
 const CocktailDetails = ({
@@ -51,7 +49,6 @@ const CocktailDetails = ({
   instaUrl,
   award,
   award2,
- 
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
@@ -75,7 +72,7 @@ const CocktailDetails = ({
       <Flex
         flexDirection={{ base: "column", lg: "row" }}
         gap={{ base: 10, lg: 0 }}
-        alignItems={{base: "center", lg: "flex-start"}}
+        alignItems={{ base: "center", lg: "flex-start" }}
       >
         <Flex flex={1} px={10}>
           <SlideFade
@@ -106,7 +103,7 @@ const CocktailDetails = ({
                   </Text>
                 ))}
               </Flex>
-              <Flex gap={5} justifyContent="center" p={4}>
+              <Flex gap={5} justifyContent="center" p={4} flexWrap="wrap">
                 {products.map((product, index) => (
                   <Flex key={product.name}>
                     {product.icon}
@@ -116,40 +113,52 @@ const CocktailDetails = ({
                   </Flex>
                 ))}
               </Flex>
-              
-             
-              { award2 && ( <Flex direction="row" alignItems="center" color={colorText} gap={5}>
-              <Image src="../medal.png" w={20} h={20}/>
-              <Text fontStyle="italic">"{award2}"</Text>
-              <Image src="../medal2.png" w={20} h={20}/>
-             </Flex>  )}
 
+              <Flex direction="row" justifyContent="center" alignContent="center" flexWrap={{base:"wrap", md:"nowrap"}}>
+                {award2 && (
+                  <Flex
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="center"
+                    color={colorText}
+                  >
+                    <Image
+                      src="../medal2.png"
+                      w={{ base: "10", md: "20" }}
+                      h={{ base: "10", md: "20" }}
+                    />
+                    <Text
+                      fontStyle="italic"
+                      fontSize="15px" 
+                    >
+                      "{award2}"
+                    </Text>
+                  </Flex>
+                )}
 
-               <Flex gap={5} justifyContent="center" p={4} alignItems="center" flexWrap="wrap">
                 {award && (
-                  <Box  >
-                <Image src={award} p={10} />
+                  <Box>
+                    <Image src={award} p={10} w="4à0px" h="200px" />
                   </Box>
-                ) } 
-                <Button
-                  onClick={() => window.open(webUrl)}
-                  background={colorText}
-                  color={colorTheme}
-                >
-                  Website
-                </Button>
-                <Button
-                  background={colorText}
-                  color={colorTheme}
-                  onClick={() => window.open(instaUrl)}
-                  leftIcon={<FaInstagram size={20}/>}
-                >
-                  Instagram
-                  
-                </Button>
+                )}
               </Flex>
-
-              
+              <Flex direction="row" gap={2} justifyContent="space-evenly">
+              <Button
+                onClick={() => window.open(webUrl)}
+                background={colorText}
+                color={colorTheme}
+              >
+                Website
+              </Button>
+              <Button
+                background={colorText}
+                color={colorTheme}
+                onClick={() => window.open(instaUrl)}
+                leftIcon={<FaInstagram size={20} />}
+              >
+                Instagram
+              </Button>
+              </Flex>
             </Flex>
           </SlideFade>
         </Flex>
@@ -199,7 +208,6 @@ export const CocktailsSection = () => {
             name: "Joven 40% | 70cl",
             icon: <Image src="../../bottle.png" w="35px" color="blue" />,
           },
-          
         ]}
         texts={[
           t("libelula.texts.text1"),
@@ -241,7 +249,7 @@ export const CocktailsSection = () => {
           },
         ]}
         award="./awards-mezcal.png"
-        award2="3rd mezcal most sold in USA"
+        award2="3rd most sold mezcal brand in USA in 2023"
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),

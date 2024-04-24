@@ -4,13 +4,13 @@ const Footer = () => {
   return (
     <section
    style={{
-    height:"15vh",
+    height:"10vh",
           background:"black",
           color: "white",
           
         }}
     >
-c'est le footer
+
     </section>
   )
 }
