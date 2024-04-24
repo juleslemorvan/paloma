@@ -50,8 +50,10 @@ export const VideoSection = () => {
         style={{ height: "100vh", objectFit: "cover" }}
         height="100vh"
         autoPlay
+        
         loop
         muted
+        playsInline
       >
         <source src="video-banner.mp4" type="video/mp4" />
         Your browser does not support the video tag.
