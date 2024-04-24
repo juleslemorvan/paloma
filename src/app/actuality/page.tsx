@@ -1,5 +1,5 @@
 import { Header } from "@/Components/Header/Header";
-import { Badge, Box, Center, Divider, Flex, Heading, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { Badge, Box, Center, Divider, Flex, Heading, Hide, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 type Product = {
@@ -48,12 +48,13 @@ const actuality = () => {
         alignContent="center"
         gap={0}
       >
+        <Hide below="md">
          <Flex width="100%" justifyContent="space-around" alignItems="center" bg="#92977E" py={4}>
-                    <Image src="./banhez-logo.png" w="200px" h="100px"/>
+                    <Image src="./banhez-logo.png" w={{base:"50px",md:"200px"}} h="100px"/>
                     <Image src="./libelula-logo.png" w="200px" h="100px"/>
                     <Image src="./odvi-logo.webp" w="200px" h="100px"/>
             </Flex>
-
+</Hide>
         <Flex direction="column"  justifyContent="center" alignItems="center" bg="whitesmoke" h="50vh">
            
           <Heading as="h1" size="4xl" fontWeight="bold" mb={4} >
