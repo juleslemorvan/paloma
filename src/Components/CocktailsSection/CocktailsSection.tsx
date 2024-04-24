@@ -198,36 +198,9 @@ export const CocktailsSection = () => {
       id="cocktails"
     >
       <CocktailDetails
-        colorTheme="#F1F1F1"
-        colorText="#375172"
-        font="'F25 Executive', sans-serif;"
-        webUrl="https://www.libelulatequila.com/"
-        instaUrl="https://www.instagram.com/libelula_tequila/"
-        products={[
-          {
-            name: "Joven 40% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
-          },
-        ]}
-        texts={[
-          t("libelula.texts.text1"),
-          t("libelula.texts.text2"),
-          t("libelula.texts.text3"),
-          t("libelula.texts.text4"),
-          t("libelula.texts.text5"),
-        ]}
-        carouselImages={[
-          "../libelula2.jpg",
-          "../libelula3.jpg",
-          "../libelula4.jpg",
-        ]}
-        mainImage="../libelula1.jpg"
-        brandLogo="../libelula-logo.png"
-      />
-      <CocktailDetails
         colorTheme="#2B3D47"
         colorText="#FFFFFF"
-        font="'F25 Executive', sans-serif;"
+        font="F25 Executive, sans-serif;"
         webUrl="https://www.banhezmezcal.com/"
         instaUrl="https://www.instagram.com/banhezmezcalartesanal/"
         products={[
@@ -261,11 +234,39 @@ export const CocktailsSection = () => {
         brandLogo="../banhez-logo.png"
       />
       <CocktailDetails
+        colorTheme="#F1F1F1"
+        colorText="#375172"
+        font="F25 Executive, sans-serif;"
+        webUrl="https://www.libelulatequila.com/"
+        instaUrl="https://www.instagram.com/libelula_tequila/"
+        products={[
+          {
+            name: "Joven 40% | 70cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+        ]}
+        texts={[
+          t("libelula.texts.text1"),
+          t("libelula.texts.text2"),
+          t("libelula.texts.text3"),
+          t("libelula.texts.text4"),
+          t("libelula.texts.text5"),
+        ]}
+        carouselImages={[
+          "../libelula2.jpg",
+          "../libelula3.jpg",
+          "../libelula4.jpg",
+        ]}
+        mainImage="../libelula1.jpg"
+        brandLogo="../libelula-logo.png"
+      />
+      
+      <CocktailDetails
         colorTheme="#F4B473"
         colorText="#4F4B49"
-        font="'F25 Executive', sans-serif;"
-        webUrl="http://google.fr"
-        instaUrl="http://google.fr"
+        font="F25 Executive, sans-serif;"
+        webUrl="https://www.odviarmagnac.com/"
+        instaUrl="https://www.instagram.com/odviarmagnac/"
         products={[
           {
             name: "ODVI 42% | 70cl / 75cl / 100cl",

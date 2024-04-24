@@ -4,7 +4,7 @@ import Form from "@/Components/Form/Form";
 import { Header } from "@/Components/Header/Header";
 import LegalAge from "@/Components/LegalAge/LegalAge";
 import Press from "@/Components/Press/Press";
-import Teams from "@/Components/Teams/Teams";
+
 import { VideoSection } from "@/Components/VideoSection/VideoSection";
 
 export default function Home() {

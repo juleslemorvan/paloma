@@ -1,6 +1,6 @@
 "use client";
 
-import { Fade, Flex, IconButton, Text } from "@chakra-ui/react";
+import { Fade, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -49,8 +49,7 @@ export const VideoSection = () => {
         width="100%"
         style={{ height: "100vh", objectFit: "cover" }}
         height="100vh"
-        autoPlay
-        
+        autoPlay       
         loop
         muted
         playsInline
@@ -69,7 +68,8 @@ export const VideoSection = () => {
         }}
       >
         <Fade in transition={{ enter: { delay: 0.1, duration: 1 } }}>
-          <h1
+          <Heading
+          as="h1"
             style={{
               fontSize: "40px",
               fontFamily: "F25 Executive', sans-serif;",
@@ -77,7 +77,7 @@ export const VideoSection = () => {
             }}
           >
             Des Spiritueux craft pour le bar
-          </h1>
+          </Heading>
         </Fade>
         <Fade in transition={{ enter: { delay: 0.5, duration: 2.3 } }}>
           <h2

@@ -41,22 +41,23 @@ export const NavBar = () => {
         justifyContent="center"
         direction={{ base: "column", md: "row" }}
         gap={20} 
-        mr={{base:"0",md:"10"}}
+        mr={{base:"0",lg:"175px"}}
+        fontFamily="F25 Executive, sans-serif;"
       >
-        <Link as={NextLink} href="#cocktails" fontFamily="F25 Executive', sans-serif;" >
-          <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+        <Link as={NextLink} href="#cocktails" textDecor="none" >
+          <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.3s" textDecor="none">
              {t("brands")}
           </Box>
            
         </Link>
-        <Link href="#Actuality" fontFamily="F25 Executive', sans-serif;">
-          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
-            {t("news")}
+        <Link href="/actuality" >
+          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
+            {t("actuality")}
           </Box>
           
         </Link>
-        <Link href="#contact" fontFamily="F25 Executive', sans-serif;">
-          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
+        <Link href="#contact" >
+          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
              {t("contact")}
           </Box>
          
