@@ -16,11 +16,11 @@ import {
 import { useTranslation } from "react-i18next";
 
 
-const langToFlag: Record<string, string> = {
-  en: "🇬🇧",
-  fr: "🇫🇷",
-  es: "🇪🇸",
-};
+// const langToFlag: Record<string, string> = {
+//   en: "EN",
+//   fr: "FR",
+//   es: "ES",
+// };
 
 export const NavBar = () => {
   const { t, i18n } = useTranslation("navbar");
@@ -67,20 +67,19 @@ export const NavBar = () => {
       <Menu>
         <MenuButton
           border={0}
-          as={IconButton}
-          aria-label="Options"
-          icon={<Text fontSize={30}>{langToFlag[i18n.language]}</Text>}
-          variant="outline"
-        />
+          fontWeight="bold"
+          aria-label="Options">
+            EN
+       </MenuButton>
         <MenuList minW="0px">
-          <MenuItem onClick={() => i18n.changeLanguage("en")}>
-            <Text fontSize={30}>{langToFlag["en"]}</Text>
+          <MenuItem onClick={() => i18n.changeLanguage("en")} fontWeight="bold">
+            EN
           </MenuItem>
-          <MenuItem onClick={() => i18n.changeLanguage("fr")}>
-            <Text fontSize={30}>{langToFlag["fr"]}</Text>
+          <MenuItem onClick={() => i18n.changeLanguage("fr")} fontWeight="bold">
+            <Text >FR</Text>
           </MenuItem>
-          <MenuItem onClick={() => i18n.changeLanguage("es")}>
-            <Text fontSize={30}>{langToFlag["es"]}</Text>
+          <MenuItem onClick={() => i18n.changeLanguage("es")} fontWeight="bold">
+            <Text >ES</Text>
           </MenuItem>
         </MenuList>
       </Menu>

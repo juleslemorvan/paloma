@@ -60,10 +60,12 @@ const Form = () => {
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
         <FormLabel>You are</FormLabel>
         <Select placeholder="Select" aria-label="type" style={{ borderColor: "#355995" }}>
-          <option>importer</option>
-          <option>distributer</option>
-          <option>bar</option>
-          <option>restaurant</option>
+          <option>Importer</option>
+          <option>Wholesaler</option>
+          <option>Bar</option>
+          <option>Restaurant</option>
+          <option>Journalist</option>
+          <option>Others</option>
         </Select>
 
         <FormControl isRequired>
