@@ -13,6 +13,7 @@ import {
   Heading,
   Image,
   Box,
+  Select,
 } from "@chakra-ui/react";
 import ScrollTop from "../scrollTop/scrollTop";
 
@@ -26,12 +27,18 @@ const Form = () => {
         margin: "0px 20px 10px 20px",
         justifyContent: "center",
         alignItems: "center",
-        position:"relative"
+        position: "relative",
       }}
       id="contact"
     >
-      <Box position="absolute" bottom={{base:"8", md:"5"}} right={{base:"2", md:"6"}}><ScrollTop/></Box>
-      
+      <Box
+        position="absolute"
+        bottom={{ base: "8", md: "5" }}
+        right={{ base: "2", md: "6" }}
+      >
+        <ScrollTop />
+      </Box>
+
       <Flex
         py={2}
         flexWrap="wrap"
@@ -51,6 +58,14 @@ const Form = () => {
       </Flex>
 
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
+        <FormLabel>You are</FormLabel>
+        <Select placeholder="Select" aria-label="type" style={{ borderColor: "#355995" }}>
+          <option>importer</option>
+          <option>distributer</option>
+          <option>bar</option>
+          <option>restaurant</option>
+        </Select>
+
         <FormControl isRequired>
           <FormLabel htmlFor="first-name">Name</FormLabel>
           <Input
