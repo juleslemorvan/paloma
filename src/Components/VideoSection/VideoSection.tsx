@@ -58,39 +58,43 @@ export const VideoSection = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          color: "white",
-        }}
+      <Flex
+        
+          position= "absolute"
+          top= "50%"
+          left= "50%"
+          transform= "translate(-50%, -50%)"
+          color= "white"
+          direction="column"
+          w="90%"
+          alignItems="center"
+      
       >
         <Fade in transition={{ enter: { delay: 0.1, duration: 1 } }}>
           <Heading
           as="h1"
-            style={{
-              fontSize: "40px",
-              fontFamily: "F25 Executive, sans-serif;",
-              fontWeight: "bold",
-            }}
+
+              fontSize= {{base:"30px",md:"40px", lg:"45px"}}
+              fontFamily= "F25 Executive, sans-serif;"
+              fontWeight= "bold"
+            
           >
             Des Spiritueux craft pour le bar
           </Heading>
         </Fade>
         <Fade in transition={{ enter: { delay: 0.5, duration: 2.3 } }}>
-          <h2
-            style={{
-              fontSize: "20px",
-              fontFamily: "F25 Executive, sans-serif;",
-            }}
+          <Heading
+          as="h3"
+            
+               fontSize= {{base:"18px",md:"20px", lg:"23px"}}
+              fontFamily= "F25 Executive, sans-serif;"
+       
           >
             Co-creation & developpement de marques de spiritieux pour le bar,
             avec les bartenders
-          </h2>
+          </Heading>
         </Fade>
-      </div>
+      </Flex>
     </section>
   );
 };
