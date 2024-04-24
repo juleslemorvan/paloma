@@ -34,7 +34,9 @@ export const NavBar = () => {
      justifyContent={{base:"space-around",md:"space-between"}}
     >
       <Flex >
+        <Link as={NextLink} href="/" textDecor="none">
       <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
+      </Link>
       </Flex>
       <Stack
         textAlign={{ base: "center" }}

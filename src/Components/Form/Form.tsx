@@ -48,18 +48,21 @@ const Form = () => {
       >
         <Heading
           as="h2"
-          style={{
-            fontWeight: "bold",
-            textAlign: "center",
-          }}
+          fontWeight="bold"
+          textAlign="center"
+          fontFamily="F25 Executive, sans-serif;"
+          my="20px"
         >
           Contact us
         </Heading>
       </Flex>
 
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
-        <FormLabel>You are</FormLabel>
-        <Select placeholder="Select" aria-label="type" style={{ borderColor: "#355995" }}>
+        <Select
+          placeholder="Select"
+          aria-label="type"
+          style={{ borderColor: "#355995" }}
+        >
           <option>Importer</option>
           <option>Wholesaler</option>
           <option>Bar</option>
@@ -69,7 +72,12 @@ const Form = () => {
         </Select>
 
         <FormControl isRequired>
-          <FormLabel htmlFor="first-name">Name</FormLabel>
+          <FormLabel
+            htmlFor="first-name"
+            fontFamily="F25 Executive, sans-serif;"
+          >
+            Name
+          </FormLabel>
           <Input
             type="name"
             id="name"
@@ -82,7 +90,9 @@ const Form = () => {
         </FormControl>
 
         <FormControl isRequired>
-          <FormLabel htmlFor="Mail">Mail</FormLabel>
+          <FormLabel htmlFor="Mail" fontFamily="F25 Executive, sans-serif;">
+            EMail
+          </FormLabel>
           <Input
             type="email"
             id="email"
@@ -95,7 +105,10 @@ const Form = () => {
         </FormControl>
 
         <FormControl isRequired>
-          <Text mb="8px"> Message</Text>
+          <Text mb="8px" fontFamily="F25 Executive, sans-serif;">
+            {" "}
+            Message
+          </Text>
           <Textarea
             placeholder="Your message..."
             name="message"
@@ -105,7 +118,12 @@ const Form = () => {
           />
         </FormControl>
 
-        <Button type="submit" variant="outline" borderColor="#355995">
+        <Button
+          type="submit"
+          variant="outline"
+          borderColor="#355995"
+          fontFamily="F25 Executive, sans-serif;"
+        >
           Send
         </Button>
       </Stack>

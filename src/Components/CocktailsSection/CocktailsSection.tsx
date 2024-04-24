@@ -147,6 +147,7 @@ const CocktailDetails = ({
                 onClick={() => window.open(webUrl)}
                 background={colorText}
                 color={colorTheme}
+                fontFamily="F25 Executive, sans-serif;"
               >
                 Website
               </Button>
@@ -155,6 +156,7 @@ const CocktailDetails = ({
                 color={colorTheme}
                 onClick={() => window.open(instaUrl)}
                 leftIcon={<FaInstagram size={20} />}
+                fontFamily="F25 Executive, sans-serif;"
               >
                 Instagram
               </Button>

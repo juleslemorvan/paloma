@@ -72,7 +72,7 @@ export const VideoSection = () => {
           as="h1"
             style={{
               fontSize: "40px",
-              fontFamily: "F25 Executive', sans-serif;",
+              fontFamily: "F25 Executive, sans-serif;",
               fontWeight: "bold",
             }}
           >
@@ -83,7 +83,7 @@ export const VideoSection = () => {
           <h2
             style={{
               fontSize: "20px",
-              fontFamily: "F25 Executive', sans-serif;",
+              fontFamily: "F25 Executive, sans-serif;",
             }}
           >
             Co-creation & developpement de marques de spiritieux pour le bar,

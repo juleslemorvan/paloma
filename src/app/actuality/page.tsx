@@ -13,9 +13,11 @@ type ArticleProps = {
   date: string;
   content:string
   img:string
+  title2?:string
+  title3?:string
 };
 
-const Article = ({img, title, products, date, content }: ArticleProps) => {
+const Article = ({img, title,title2, title3, products, date, content }: ArticleProps) => {
   return (
     <Stack w="100%" as="article" >
         
@@ -29,7 +31,9 @@ const Article = ({img, title, products, date, content }: ArticleProps) => {
       </Flex>
       <Text fontSize={{base:"10px", md:"15px"}} fontWeight="bold">{date}</Text>
       </Flex> 
-      <Heading as="h2" fontFamily="F25 Executive, sans-serif;">{title}</Heading>
+      <Heading as="h2" fontFamily="F25 Executive, sans-serif;" fontSize="35px">{title}</Heading>
+      <Heading as="h3" fontFamily="F25 Executive,sans-serif;" fontSize="28px">{title2}</Heading>
+      <Heading as="h4" fontFamily="F25 Executive, sans-serif;" fontSize="19px">{title3}</Heading>
       <Flex justifyContent="center" alignItems="center">
         <Image src={img} w="500px" h="300px" objectFit="cover"/>
         </Flex>
@@ -57,8 +61,8 @@ const actuality = () => {
 </Hide>
         <Flex direction="column"  justifyContent="center" alignItems="center" bg="whitesmoke" h="50vh">
            
-          <Heading as="h1" size="4xl" fontWeight="bold" mb={4} >
-            Actuality
+          <Heading as="h1" size="4xl" fontWeight="bold" mb={4} fontFamily="F25 Executive, sans-serif;">
+            News
           </Heading>
           <Heading as="h2" size="md" fontFamily="F25 Executive, sans-serif;">
             What's new for us ?
@@ -84,6 +88,8 @@ const actuality = () => {
                 },
                 ]}
                 title="Mon premier article"
+                title2="Title2"
+                title3="Title3"
                 date="April 01, 2023"
                 content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
                 img="https://picsum.photos/300"
@@ -105,6 +111,8 @@ const actuality = () => {
                 },
                 ]}
                 title="Mon Deuxieme article"
+                title2="Mon sous titre"
+                title3="Mon petit sous titre"
                 date="April 03, 2024"
                 content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
                 img="https://picsum.photos/800"

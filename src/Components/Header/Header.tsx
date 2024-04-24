@@ -11,11 +11,13 @@ import {
   useDisclosure,
   Image,
 } from "@chakra-ui/react";
+import NextLink from 'next/link'
 
 import { NavBar } from "../NavBar/NavBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect } from "react";
 import { useParams } from "next/navigation";
+import { Link } from "@chakra-ui/next-js";
 
 export const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,7 +39,9 @@ export const Header = () => {
       </Hide>
 
       <Show below="md">
+        <Link as={NextLink} href="/" textDecor="none">
         <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
+        </Link>
         <IconButton
           aria-label="open mobile menu"
           onClick={onOpen}
