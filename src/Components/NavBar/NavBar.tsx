@@ -56,7 +56,7 @@ export const NavBar = () => {
           
         </Link>
         <Link href="#contact" fontFamily="F25 Executive', sans-serif;">
-          <Box >
+          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.7s">
              {t("contact")}
           </Box>
          

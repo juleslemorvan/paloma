@@ -30,7 +30,7 @@ const Form = () => {
       }}
       id="contact"
     >
-      <Box position="absolute" top={6} right={8}><ScrollTop/></Box>
+      <Box position="absolute" bottom={{base:"8", md:"5"}} right={{base:"2", md:"6"}}><ScrollTop/></Box>
       
       <Flex
         py={2}

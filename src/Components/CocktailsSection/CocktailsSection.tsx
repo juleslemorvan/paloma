@@ -103,7 +103,7 @@ const CocktailDetails = ({
                   </Text>
                 ))}
               </Flex>
-              <Flex gap={5} justifyContent="center" p={4} flexWrap="wrap">
+              <Flex gap={5} justifyContent="center" p={4} mt="20px" flexWrap="wrap">
                 {products.map((product, index) => (
                   <Flex key={product.name}>
                     {product.icon}
