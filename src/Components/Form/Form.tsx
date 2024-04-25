@@ -58,8 +58,15 @@ const Form = () => {
       </Flex>
 
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
+
+        <FormLabel
+            htmlFor="identity"
+            fontFamily="F25 Executive, sans-serif;"
+          >
+            You are
         <Select
-          placeholder="Select"
+          isRequired
+          placeholder="Choose an option"
           aria-label="type"
           style={{ borderColor: "#355995" }}
         >
@@ -70,7 +77,7 @@ const Form = () => {
           <option>Journalist</option>
           <option>Others</option>
         </Select>
-
+</FormLabel>
         <FormControl isRequired>
           <FormLabel
             htmlFor="first-name"

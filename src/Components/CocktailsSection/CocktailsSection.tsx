@@ -93,7 +93,7 @@ const CocktailDetails = ({
           <SlideFade
             in={isVisible}
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
-            offsetX="500px"
+            offsetX="100px"
           >
             <Flex direction="column">
               <Flex flexDir="column" gap={2}>
