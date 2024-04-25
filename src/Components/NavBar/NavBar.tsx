@@ -46,7 +46,7 @@ export const NavBar = () => {
         mr={{base:"0",lg:"175px"}}
         fontFamily="F25 Executive, sans-serif;"
       >
-        <Link as={NextLink} href="#cocktails" textDecor="none" >
+        <Link as={NextLink} href="/#cocktails" textDecor="none" >
           <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.3s" textDecor="none">
              {t("brands")}
           </Box>
@@ -58,7 +58,7 @@ export const NavBar = () => {
           </Box>
           
         </Link>
-        <Link href="#contact" >
+        <Link href="/#contact" >
           <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
              {t("contact")}
           </Box>
@@ -72,6 +72,7 @@ export const NavBar = () => {
           border={0}
           fontWeight="bold"
           aria-label="Options">
+            
             EN
        </MenuButton>
         <MenuList minW="0px">

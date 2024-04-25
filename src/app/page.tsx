@@ -9,13 +9,12 @@ import Press from "@/Components/Press/Press";
 import {  Button, Center, Flex, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Stack, useDisclosure } from '@chakra-ui/react'
 
 import { VideoSection } from "@/Components/VideoSection/VideoSection";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
- const { isOpen, onOpen, onClose } = useDisclosure()
 
-const [isVisible, setIsVisible] = useState(true)
+
 
   return (
     <main style={{ flex: "1" }} >
