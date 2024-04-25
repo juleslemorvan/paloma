@@ -43,7 +43,7 @@ const Article = ({img, title,title2, title3, products, date, content }: ArticleP
   );
 };
 
-const actuality = () => {
+const news = () => {
   return (
     <main style={{ flex: "1", padding:"0px" }}>
       <Header />
@@ -125,6 +125,6 @@ const actuality = () => {
   );
 };
 
-export default actuality;
+export default news;
 
 

@@ -52,9 +52,9 @@ export const NavBar = () => {
           </Box>
            
         </Link>
-        <Link href="/Our news" >
+        <Link href="/news" >
           <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
-            {t("actuality")}
+            {t("news")}
           </Box>
           
         </Link>
