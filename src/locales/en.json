@@ -40,13 +40,13 @@
       }
     },
 
-    "website": "website"
+    "website": "Website"
   },
 
    "quotes": {
-   "newyorktimes": " Among our favorites… was our No. 8 bottle, the floral, herbal Banhez, made from the cuishe agave, which might explain its quirky fresh, meadowy feeling.",
-   "figaro": "Selected as the best Mezcal for cocktails.",
-   "hardi":  "ODVI, a modern, lively, aromatic and accessible Armagnac that perfectly meets cocktail desires."
+   "newyorktimes": " “Among our favorites… was our No. 8 bottle, the floral, herbal Banhez, made from the cuishe agave, which might explain its quirky fresh, meadowy feeling.“",
+   "figaro": "“Selected as the best Mezcal for cocktails.“",
+   "hardi":  "“ODVI, a modern, lively, aromatic and accessible Armagnac that perfectly meets cocktail desires.“"
   },
 
   "form" : {
