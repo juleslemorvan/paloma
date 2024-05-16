@@ -59,7 +59,7 @@ const news = () => {
                     <Image src="./odvi-logo.webp" w="200px" h="100px"/>
             </Flex>
 </Hide>
-        <Flex direction="column"  justifyContent="center" alignItems="center" bg="whitesmoke" h="50vh">
+        <Flex direction="column"  justifyContent="center" alignItems="center" bg="whitesmoke" h="30vh">
            
           <Heading as="h1" size="4xl" fontWeight="bold" mb={4} fontFamily="F25 Executive, sans-serif;">
             News

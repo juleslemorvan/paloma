@@ -14,7 +14,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useInViewport } from "react-in-viewport";
 import { FaInstagram } from "react-icons/fa";
-import { FaAward } from "react-icons/fa";
+
 
 type Product = {
   name: string;
@@ -53,6 +53,8 @@ const CocktailDetails = ({
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
   const isVisible = inViewport || enterCount > 0;
+
+    const { t, i18n } = useTranslation("cocktails");
 
   return (
     <Stack
@@ -149,7 +151,7 @@ const CocktailDetails = ({
                 color={colorTheme}
                 fontFamily="F25 Executive, sans-serif;"
               >
-                Website
+                 {t("website")}
               </Button>
               <Button
                 background={colorText}
@@ -224,7 +226,7 @@ export const CocktailsSection = () => {
           },
         ]}
         award="./awards-mezcal.png"
-        award2="3rd most sold mezcal brand in USA in 2023"
+       
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),
@@ -252,7 +254,7 @@ export const CocktailsSection = () => {
           t("libelula.texts.text2"),
           t("libelula.texts.text3"),
           t("libelula.texts.text4"),
-          t("libelula.texts.text5"),
+          
         ]}
         carouselImages={[
           "../libelula2.jpg",
@@ -284,7 +286,7 @@ export const CocktailsSection = () => {
           t("odvi.texts.text2"),
           t("odvi.texts.text3"),
           t("odvi.texts.text4"),
-          t("odvi.texts.text5"),
+          
         ]}
         carouselImages={["../ODVI2.jpg", "../ODVI3.jpg", "../ODVI4.jpg"]}
         mainImage="../ODVI1.jpg"

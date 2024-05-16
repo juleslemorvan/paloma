@@ -1,41 +1,78 @@
 {
   "navbar": {
     "brands": "Nos marques",
-    "actuality": "Actualités",
+    "news": "Actualités",
     "contact": "Contacte"
   },
 
-  "cocktails": {
-    "libelula": {
-      "texts": {
-        "text1": "c'est un exemple de text numero 1 qui sera traduit automatiquement par le bouton au niveau de la navigation",
-        "text2": "What make it special is that Tequila Libelula is a special blend of 80% tequila blanco and 20% tequila reposado that accentuates the best of both spirits, creating the perfect harmony.",
-        "text3": "It’s the best of tradition and ingenuity to create a beautifully balanced spirit for sipping or mixing.",
-        "text4": "Libélula Tequila is renowned for its smooth and balanced flavor profile. It boasts subtle notes of sweet agave, citrus, and hints of spice, with a velvety texture that coats the palate.",
-        "text5": "Whether enjoyed neat, on the rocks, or as the base for cocktails, Libélula Tequila offers a versatile drinking experience. Its well-rounded flavor profile makes it suitable for sipping slowly to savor its complexity or mixing into cocktails to enhance their flavors."
-      }
+    "announcement": {
+      "announcement": "Rencontrez-nous à Bar Covente Berlin | 14 au 16 octobre 2024"
     },
+
+  "cocktails": {
     "banhez": {
       "texts": {
-        "text1": "Banhez Mezcal is crafted using traditional methods passed down through generations in Oaxaca, Mexico. Its authentic production process, including hand-harvesting agave and artisanal distillation techniques, appeals to consumers seeking an authentic mezcal experience.",
-        "text2": "Banhez offers a range of mezcal expressions, each showcasing the unique flavors and characteristics of different agave varietals and production techniques.",
-        "text3": "Banhez Mezcal is owned and produce by a COOP of   55 families of Mezcaleros from various communities within the region of Ejutla, South of Oaxaca. Each Mezcalero is contributing to the diversity and quality of mezcal produced.",
-        "text4": "Banhez Ensemble: Comprised of 90% Espadín and 10% Barril agaves, this mezcal is delightfully mild, floral and fruity (pineapple, banana). Banhez Ensamble is perfect for first-time mezcal tasters and wonderful for cocktail innovation."
+        "text1": "Nichée dans le village pittoresque de San Miguel Ejutla, au cœur de la vallée centraled'Oaxaca, se trouve une coopérative alimentée par la tradition et la durabilité. Composée deplus de 55 familles, l'Unión Productores de Agropecuarios del Distrito de Ejutla de Crespo(UPADEC) se consacre à l'art de la production de mezcal équitable, faisant écho auxméthodes transmises par leurs ancêtres depuis près de deux siècles.",
+        "text2": "Banhez présente une gamme d'expressions de mezcal différentes, chacune mettant en valeur les saveurs et les qualités individuelles de divers types d'agave. Banhez incarne l'essence de la nature, présentant une expression distinctive de mezcal fabriqué à partir de plantes d'agave sauvage. Banhez Sil capture l'esprit indompté de l'agave, offrant un profil de saveur unique qui reflète la diversité naturelle de son habitat. À chaque gorgée, offrez-vous la riche complexité et l'authenticité du mezcal silvestre, un témoignage de tradition, de durabilité et de la biodiversité dynamique du paysage d'Oaxaca.",
+        "text3": "Ensemble Banhez : Fabriqué à partir d'un mélange de 90 % d'Espadin et de 10 % d'agaves Barril, Banhez Ensamble offre un profil particulièrement doux, floral et fruité, avec des notes d'ananas et de banane. Banhez Ensamble est un choix idéal pour ceux qui découvrent le mezcal pour la première fois et sert de base idéale pour des cocktails innovants, rehaussés par ses 42 abv. Récompensé par des distinctions prestigieuses, notamment les prix du meilleur mezcal et du double or au San Francisco World Spirits Competition 2017.",
+        "text4": "Banhez Mezcal est fièrement détenu et exploité par les familles de la coopérative U.P.A.D.E.C à Ejutla, Oaxaca. Nos membres, répartis dans les collines et les vallées d'Ejutla, s'unissent pour cultiver, récolter, distiller et emballer chaque bouteille de mezcal avec soin et dévouement."
       }
     },
+    "libelula": {
+      "texts": {
+        "text1": "Libélula Tequila est une tequila fabriquée artisanallement en small batch selon des méthodes de production traditionnelles. La tequila est composée à 100 % d'agave bleu Weber provenant des hauts plateaux de Jalisco, au Mexique. Fabriqué à partir de la distillerie Bonanza, NOM 1604",
+        "text2": "La Tequila Libelula est un mélange spécial de 80 % de tequila blanco et de 20 % de tequila reposado qui accentue le meilleur des deux expressions.",
+        "text3": "Notre blanco célèbre l'essence pure de l'agave, offrant des notes d'agrumes vives et des arômes verdoyants, tandis que notre reposado vieilli en chêne introduit des couches nuancées de vanille et d'épices. Lorsqu'elles sont mélangées, ces expressions distinctes s'harmonisent, transcendant les frontières traditionnelles de la tequila.",
+        "text4": "C’est le meilleur de la tradition et de l’ingéniosité pour créer un spiritueux magnifiquement équilibré à siroter ou à mélanger."
+      }
+    },
+    
     "odvi": {
       "texts": {
-        "text1": "ODVI Armagnac is renowned for offering an Armagnac made for the  cocktail industry.",
-        "text2": "ODVI has worked on different blends of eaux-de-vie to create a harmonious, complex and balance final product that offers alternatives and encourage bartenders to explore more the Brandy category.",
-        "text3": "ODVI offers a range of Armagnac expressions to suit different preferences and occasions. Whether you prefer a young aged and vibrant Armagnac or a more floral fruity,  ODVI has a variety of options to choose from, each showcasing the brand's commitment to quality and excellence.",
-        "text4": "ODVI Blanche is an unaged Armagnac at 45% Abv. Distilled in the southwest of France with a unique blend of 55% Baco and 45% Ugni Blanc, this Blanche Armagnac captures the very essence of the grape without the influence of oak. Briefly matured in glass demijohns and stainless steel tanks, it shines with freshness and fruity intensity.",
-        "text5": "ODVI aged ODVI Armagnac (pronounced eau-de-vie) is a living link between history and modernity. Made in Gascony, France, from a blend of 3 different grapes (45% Baco, 40% Ugni Blanc, and 15% Folle Blanche) ODVI Armagnac is fresh, fruit-forward, and peppery with notes of prune and peach."
+        "text1": "ODVI Armagnac est réputé pour son dévouement à l'élaboration d'expressions d'Armagnac adaptées aux mixologues, dans le but d'enflammer leur créativité dans la concoctation de cocktails d'Armagnac innovants. Grâce à un mélange minutieux d'eaux-de-vie, ODVI obtient un produit final harmonieux, complexe et bien équilibré, incitant les mixologues à plonger plus profondément dans le monde du brandy",
+        "text2": "ODVI propose une gamme d'expressions d'Armagnac pour répondre à différentes préférences et occasions. Que vous préfériez un Armagnac jeune et vibrant ou un Armagnac non vieilli plus floral et fruité, ODVI propose une variété d'options, chacune démontrant l'engagement de la marque envers la qualité et l'excellence.",
+        "text3": "ODVI Blanche, un Armagnac non vieilli à 45 % ABV, capture l'essence pure du raisin sans l'influence du chêne. Distillé dans le sud-ouest de la France à partir d'un assemblage unique de 55 % de Baco et 45 % d'Ugni Blanc, cet Armagnac Blanc subit une brève période de maturation dans des bonbonnes en verre et des cuves en acier inoxydable, ce qui donne un spiritueux débordant de fraîcheur et de dynamisme fruité.",
+        "text4": "Pendant ce temps, l'Armagnac vieilli ODVI est une fusion de tradition et de modernité. Il s'agit d'un assemblage de trois cépages (45 % Baco, 40 % Ugni Blanc et 15 % Folle Blanche), ODVI 2 ans d'âge offre une bouche fraîche et fruitée avec une touche poivrée et des notes captivantes de pruneau et de pêche."
       },
       "ranges": {
         "range1":"ODVI Blanche is an unaged Armagnac at 45% Abv. Distilled in the southwest of France with a unique blend of 55% Baco and 45% Ugni Blanc, this Blanche Armagnac captures the very essence of the grape without the influence of oak. Briefly matured in glass demijohns and stainless steel tanks, it shines with freshness and fruity intensity.",
         "range2": "ODVI aged ODVI Armagnac (pronounced eau-de-vie) is a living link between history and modernity. Made in Gascony, France, from a blend of 3 different grapes (45% Baco, 40% Ugni Blanc, and 15% Folle Blanche) ODVI Armagnac is fresh, fruit-forward, and peppery with notes of prune and peach."
       }
-    }
+    },
+
+    "website": "site web"
+  },
+   "quotes": {
+   "newyorktimes": "Parmi nos préférées… figurait notre bouteille n°8, la Banhez florale et herbacée, fabriquée à partir d'agave cuishe, ce qui pourrait expliquer sa sensation originale de fraîcheur et de prairie.",
+   "figaro": " Selectionné comme le meilleur Mezcal pour les cocktails.",
+   "hardi":  " ODVI, un Armagnac moderne, vif, aromatique et accessible qui répond parfaitement aux envies de cocktails."
+  },
+
+  "form" : {
+    "title":"Contactez-nous",
+    "input": {
+      "control1":"Vous êtes",
+      "control2":"Nom",
+      "control3":"Email",
+      "control4":"Message"
+    },
+    "options": {
+      "option1":"Choisissez une option",
+      "option2":"Importateur",
+      "option3":"Distributeur",
+      "option4":"Bar",
+      "option5":"Restaurant",
+      "option6":"Journaliste",
+      "option7":"Influenceur",
+      "option8":"Autres"
+    },
+    "placeholder": {
+      "name": "Votre nom",
+      "email": "Votre email",
+      "message": "Votre message"
+    },
+    "button":"Envoyer"
   }
+
  
 }

@@ -2,10 +2,12 @@
 
 import { Fade, Flex, Heading, IconButton, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { IoCloseSharp } from "react-icons/io5";
 
 export const VideoSection = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const { t, i18n } = useTranslation("announcement");
 
   return (
     <section
@@ -32,7 +34,7 @@ export const VideoSection = () => {
           fontFamily="revert"
           fontSize={{base: "15px", md:"20px"}}
         >
-           Meet us at Bar Covente Berlin | 14th - 16th October 2024
+           {t("announcement")}
         </Text>
         <IconButton
           onClick={() => setIsVisible(false)}
@@ -59,7 +61,6 @@ export const VideoSection = () => {
       </video>
 
       <Flex
-        
           position= "absolute"
           top= "50%"
           left= "50%"
@@ -68,24 +69,20 @@ export const VideoSection = () => {
           direction="column"
           w="90%"
           alignItems="center"
-      
       >
         <Fade in transition={{ enter: { delay: 0.1, duration: 1 } }}>
           <Heading
-          as="h1"
-
+              as="h1"
               fontSize= {{base:"30px",md:"40px", lg:"45px"}}
               fontFamily= "F25 Executive, sans-serif;"
               fontWeight= "bold"
-            
           >
             Des Spiritueux craft pour le bar
           </Heading>
         </Fade>
         <Fade in transition={{ enter: { delay: 0.5, duration: 2.3 } }}>
           <Heading
-          as="h3"
-            
+                as="h3"
                fontSize= {{base:"18px",md:"20px", lg:"23px"}}
               fontFamily= "F25 Executive, sans-serif;"
        

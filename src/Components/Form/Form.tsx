@@ -16,8 +16,10 @@ import {
   Select,
 } from "@chakra-ui/react";
 import ScrollTop from "../scrollTop/scrollTop";
+import { useTranslation } from "react-i18next";
 
 const Form = () => {
+  const { t, i18n } = useTranslation("form");
   return (
     <section
       style={{
@@ -53,42 +55,40 @@ const Form = () => {
           fontFamily="F25 Executive, sans-serif;"
           my="20px"
         >
-          Contact us
+          {t("title")}
         </Heading>
       </Flex>
 
+        <form>
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
-
-        <FormLabel
-            htmlFor="identity"
-            fontFamily="F25 Executive, sans-serif;"
+        <FormLabel htmlFor="identity" fontFamily="F25 Executive, sans-serif;">
+          {t("input.control1")}
+          <Select
+            isRequired
+            placeholder={t("options.option1")}
+            aria-label="type"
+            style={{ borderColor: "#355995" }}
           >
-            You are
-        <Select
-          isRequired
-          placeholder="Choose an option"
-          aria-label="type"
-          style={{ borderColor: "#355995" }}
-        >
-          <option>Importer</option>
-          <option>Wholesaler</option>
-          <option>Bar</option>
-          <option>Restaurant</option>
-          <option>Journalist</option>
-          <option>Others</option>
-        </Select>
-</FormLabel>
+            <option>{t("options.option2")}</option>
+            <option>{t("options.option3")}</option>
+            <option>{t("options.option4")}</option>
+            <option>{t("options.option5")}</option>
+            <option>{t("options.option6")}</option>
+            <option>{t("options.option7")}</option>
+            <option>{t("options.option8")}</option>
+          </Select>
+        </FormLabel>
         <FormControl isRequired>
           <FormLabel
             htmlFor="first-name"
             fontFamily="F25 Executive, sans-serif;"
           >
-            Name
+            {t("input.control2")}
           </FormLabel>
           <Input
             type="name"
             id="name"
-            placeholder="Your name"
+            placeholder={t("placeholder.name")}
             aria-label="name"
             name="name"
             style={{ borderColor: "#355995" }}
@@ -98,12 +98,12 @@ const Form = () => {
 
         <FormControl isRequired>
           <FormLabel htmlFor="Mail" fontFamily="F25 Executive, sans-serif;">
-            EMail
+            {t("input.control3")}
           </FormLabel>
           <Input
             type="email"
             id="email"
-            placeholder="Email"
+            placeholder={t("placeholder.email")}
             aria-label="email"
             name="email"
             style={{ borderColor: "#355995" }}
@@ -113,11 +113,10 @@ const Form = () => {
 
         <FormControl isRequired>
           <Text mb="8px" fontFamily="F25 Executive, sans-serif;">
-            {" "}
-            Message
+            {t("input.control4")}
           </Text>
           <Textarea
-            placeholder="Your message..."
+            placeholder={t("placeholder.message")}
             name="message"
             style={{ borderColor: "#355995" }}
             autoComplete="off"
@@ -131,9 +130,10 @@ const Form = () => {
           borderColor="#355995"
           fontFamily="F25 Executive, sans-serif;"
         >
-          Send
+          {t("button")}
         </Button>
       </Stack>
+      </form>
       <Image src="../frise-logo.png" w="500px" h="150px" />
     </section>
   );

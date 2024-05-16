@@ -12,7 +12,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import NextLink from 'next/link'
-
 import { NavBar } from "../NavBar/NavBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useEffect } from "react";

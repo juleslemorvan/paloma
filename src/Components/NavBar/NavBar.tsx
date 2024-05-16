@@ -2,7 +2,6 @@
 import { Link } from "@chakra-ui/next-js";
 import NextLink from 'next/link'
 import {
-  IconButton,
   Image,
   Text,
   Menu,
@@ -12,18 +11,30 @@ import {
   Stack,
   Box,
   Flex,
+  Select,
+  Button,
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
 
-
-// const langToFlag: Record<string, string> = {
-//   en: "EN",
-//   fr: "FR",
-//   es: "ES",
-// };
 
 export const NavBar = () => {
   const { t, i18n } = useTranslation("navbar");
+
+const [selectedLanguage, setselectedLanguage] = useState('EN');
+
+useEffect(() => {
+if(selectedLanguage === "EN") {
+i18n.changeLanguage("en")
+}else if(selectedLanguage === "FR") {
+  i18n.changeLanguage("fr")
+}else if(selectedLanguage === "ES") {
+  console.log("ok espagnol");
+  
+  i18n.changeLanguage("es")
+}
+}, [selectedLanguage])
+
 
   return (
     <Stack
@@ -46,47 +57,34 @@ export const NavBar = () => {
         mr={{base:"0",lg:"175px"}}
         fontFamily="F25 Executive, sans-serif;"
       >
-        <Link as={NextLink} href="/#cocktails" textDecor="none" >
-          <Box  _hover={{ fontWeight:"bold"}} transition="ease 0.3s" textDecor="none">
+        <Link as={NextLink} href="/#cocktails" _hover={{textDecoration: "none", transition:"ease 0.3s" }} >
+          <Box  _hover={{fontWeight:"bold", transition:"ease 0.3s"}}  >
              {t("brands")}
-          </Box>
-           
+          </Box> 
         </Link>
-        <Link href="/news" >
+
+        <Link href="/news" _hover={{textDecoration: "none"}}>
           <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
             {t("news")}
           </Box>
-          
         </Link>
-        <Link href="/#contact" >
+
+        <Link href="/#contact" _hover={{textDecoration: "none"}}>
           <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
              {t("contact")}
           </Box>
-         
         </Link>
+
       </Stack>
 
     <Flex display="flex"  mr={{base:"0px",md:"60px"}}>
-      <Menu>
-        <MenuButton
-          border={0}
-          fontWeight="bold"
-          aria-label="Options">
-            
-            EN
-       </MenuButton>
-        <MenuList minW="0px">
-          <MenuItem onClick={() => i18n.changeLanguage("en")} fontWeight="bold">
-            EN
-          </MenuItem>
-          <MenuItem onClick={() => i18n.changeLanguage("fr")} fontWeight="bold">
-            <Text >FR</Text>
-          </MenuItem>
-          <MenuItem onClick={() => i18n.changeLanguage("es")} fontWeight="bold">
-            <Text >ES</Text>
-          </MenuItem>
-        </MenuList>
-      </Menu>
+
+     <Select value={selectedLanguage} onChange={e => setselectedLanguage(e.target.value)}>
+        <option value='EN' onSelect={() => i18n.changeLanguage("en")}>EN</option>
+        <option value='FR' onSelect={() => i18n.changeLanguage("fr")}>FR</option>
+        <option value='ES' onSelect={() => i18n.changeLanguage("es")}>ES</option>
+     </Select>
+
       </Flex>
     </Stack>
   );

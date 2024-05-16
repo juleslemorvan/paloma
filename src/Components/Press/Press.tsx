@@ -1,9 +1,11 @@
 "use client";
 
-import { Flex, Heading, Image, Text, chakra } from "@chakra-ui/react";
+import { Flex, Image, Text, chakra } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import React from "react";
 
 const Press = () => {
+  const { t } = useTranslation("quotes");
   return (
     <chakra.section
       py={5}
@@ -31,9 +33,7 @@ const Press = () => {
       >
         <Image src="../ny-logo.png" h={"70px"} />
         <Text textAlign={"center"} fontStyle="italic">
-          " Among our favorites… was our No. 8 bottle, the floral, herbal
-          Banhez, made from the cuishe agave, which might explain its quirky
-          fresh, meadowy feeling."
+          {t("newyorktimes")}
         </Text>
       </Flex>
 
@@ -46,7 +46,7 @@ const Press = () => {
       >
         <Image src="../logo-lefigaro.png" h={"70px"} />
         <Text textAlign={"center"} fontStyle="italic">
-          " Selectionné comme le meilleur Mezcal pour les cocktails."
+          {t("figaro")}
         </Text>
       </Flex>
 
@@ -59,8 +59,7 @@ const Press = () => {
       >
         <Image src="../leshardis-logo.png" h={"80px"} />
         <Text textAlign={"center"} fontStyle="italic">
-          " ODVI, un Armagnac moderne, vif, aromatique et accessible qui répond
-          parfaitement aux envies de cocktails."
+         {t("hardi")}
         </Text>
       </Flex>
     </chakra.section>
