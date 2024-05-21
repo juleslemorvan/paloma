@@ -71,7 +71,8 @@
       "email": "Votre email",
       "message": "Votre message"
     },
-    "button":"Envoyer"
+    "button":"Envoyer",
+    "conf":"Message envoyé, nous vous recontacteront au plus vite"
   }
 
  

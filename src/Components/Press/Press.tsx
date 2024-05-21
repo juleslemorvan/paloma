@@ -9,9 +9,9 @@ const Press = () => {
   return (
     <chakra.section
       py={5}
-      bgColor="whitesmoke"
+      
       style={{
-        backgroundColor: "whitesmoke",
+        backgroundColor: "#db9d73",
         color: "black",
         scrollMarginBlock: 0,
         scrollSnapAlign: "start none",
@@ -32,7 +32,7 @@ const Press = () => {
         align="center"
       >
         <Image src="../ny-logo.png" h={"70px"} />
-        <Text textAlign={"center"} fontStyle="italic">
+        <Text textAlign={"center"} fontStyle="italic" >
           {t("newyorktimes")}
         </Text>
       </Flex>
@@ -45,7 +45,7 @@ const Press = () => {
         align="center"
       >
         <Image src="../logo-lefigaro.png" h={"70px"} />
-        <Text textAlign={"center"} fontStyle="italic">
+        <Text textAlign={"center"} fontStyle="italic" >
           {t("figaro")}
         </Text>
       </Flex>
@@ -58,7 +58,7 @@ const Press = () => {
         align="center"
       >
         <Image src="../leshardis-logo.png" h={"80px"} />
-        <Text textAlign={"center"} fontStyle="italic">
+        <Text textAlign={"center"} fontStyle="italic" >
          {t("hardi")}
         </Text>
       </Flex>

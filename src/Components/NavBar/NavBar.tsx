@@ -3,16 +3,12 @@ import { Link } from "@chakra-ui/next-js";
 import NextLink from 'next/link'
 import {
   Image,
-  Text,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
+
   Stack,
   Box,
   Flex,
   Select,
-  Button,
+
 } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
@@ -40,6 +36,7 @@ i18n.changeLanguage("en")
     <Stack
       as="nav"
       flex="1"
+      
       direction={{ base: "column", md: "row" }}
       align="center"
      justifyContent={{base:"space-around",md:"space-between"}}
@@ -55,22 +52,22 @@ i18n.changeLanguage("en")
         direction={{ base: "column", md: "row" }}
         gap={20} 
         mr={{base:"0",lg:"175px"}}
-        fontFamily="F25 Executive, sans-serif;"
+        fontFamily="Figtree, sans-serif;"
       >
-        <Link as={NextLink} href="/#cocktails" _hover={{textDecoration: "none", transition:"ease 0.3s" }} >
-          <Box  _hover={{fontWeight:"bold", transition:"ease 0.3s"}}  >
+        <Link  href="/#cocktails"   _hover={{textDecoration: "none" }} >
+          <Box  letterSpacing={{ base: "0px", md:"1px" }} _hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
              {t("brands")}
           </Box> 
         </Link>
 
         <Link href="/news" _hover={{textDecoration: "none"}}>
-          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
+          <Box letterSpacing={{ base: "0px", md:"1px" }}_hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
             {t("news")}
           </Box>
         </Link>
 
-        <Link href="/#contact" _hover={{textDecoration: "none"}}>
-          <Box _hover={{ fontWeight:"bold"}} transition="ease 0.3s">
+        <Link href="/#contact"   _hover={{textDecoration: "none"}}>
+          <Box letterSpacing={{ base: "0px", md:"1px" }} _hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
              {t("contact")}
           </Box>
         </Link>
@@ -79,7 +76,7 @@ i18n.changeLanguage("en")
 
     <Flex display="flex"  mr={{base:"0px",md:"60px"}}>
 
-     <Select value={selectedLanguage} onChange={e => setselectedLanguage(e.target.value)}>
+     <Select value={selectedLanguage} onChange={e => setselectedLanguage(e.target.value)} color="#db9d73" fontWeight="bolder"  boxShadow="10%">
         <option value='EN' onSelect={() => i18n.changeLanguage("en")}>EN</option>
         <option value='FR' onSelect={() => i18n.changeLanguage("fr")}>FR</option>
         <option value='ES' onSelect={() => i18n.changeLanguage("es")}>ES</option>

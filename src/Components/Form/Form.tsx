@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {  useRef, useState } from "react";
 import {
   Stack,
   FormLabel,
@@ -14,12 +14,52 @@ import {
   Image,
   Box,
   Select,
+  useToast,
+  Hide,
 } from "@chakra-ui/react";
 import ScrollTop from "../scrollTop/scrollTop";
 import { useTranslation } from "react-i18next";
+import emailjs from '@emailjs/browser'
+
 
 const Form = () => {
   const { t, i18n } = useTranslation("form");
+  const toast = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+
+const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+     const currentForm = form.current;
+     if (currentForm == null) return;
+    emailjs
+      .sendForm(
+        "service_yyq3d7j",
+        "template_tlerafb",
+        currentForm,
+        "eWDMxaVvHwEsa1jUR"
+      )
+      .then(
+        (result) => {
+          toast({
+            title: t("conf"),
+            status: "success",
+            duration: 2000,
+            isClosable: false,
+            position: "bottom",
+          });
+          setIsLoading(false);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.currentTarget.reset();
+  };
+
+
   return (
     <section
       style={{
@@ -30,6 +70,7 @@ const Form = () => {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
+        fontFamily:"Figtree, sans-serif;"
       }}
       id="contact"
     >
@@ -52,18 +93,28 @@ const Form = () => {
           as="h2"
           fontWeight="bold"
           textAlign="center"
-          fontFamily="F25 Executive, sans-serif;"
+          fontFamily="Figtree, sans-serif;"
           my="20px"
+          
         >
           {t("title")}
         </Heading>
       </Flex>
 
-        <form>
+      
+      <Flex direction="row" alignItems="center" justifyContent="space-evenly" w="100%">
+
+      
+      <Hide below="lg">
+      <Image src="../cocktail4.png" w="100px" h="150px"/>
+      </Hide>
+
+        <form  ref={form} onSubmit={sendEmail}>
       <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
-        <FormLabel htmlFor="identity" fontFamily="F25 Executive, sans-serif;">
+        <FormLabel htmlFor="identity" fontFamily="Figtree, sans-serif;">
           {t("input.control1")}
           <Select
+            name="type"
             isRequired
             placeholder={t("options.option1")}
             aria-label="type"
@@ -81,7 +132,7 @@ const Form = () => {
         <FormControl isRequired>
           <FormLabel
             htmlFor="first-name"
-            fontFamily="F25 Executive, sans-serif;"
+            fontFamily="Figtree, sans-serif;"
           >
             {t("input.control2")}
           </FormLabel>
@@ -97,7 +148,7 @@ const Form = () => {
         </FormControl>
 
         <FormControl isRequired>
-          <FormLabel htmlFor="Mail" fontFamily="F25 Executive, sans-serif;">
+          <FormLabel htmlFor="Mail" fontFamily="Figtree, sans-serif;">
             {t("input.control3")}
           </FormLabel>
           <Input
@@ -112,7 +163,7 @@ const Form = () => {
         </FormControl>
 
         <FormControl isRequired>
-          <Text mb="8px" fontFamily="F25 Executive, sans-serif;">
+          <Text mb="8px" fontFamily="Figtree, sans-serif;">
             {t("input.control4")}
           </Text>
           <Textarea
@@ -128,13 +179,24 @@ const Form = () => {
           type="submit"
           variant="outline"
           borderColor="#355995"
-          fontFamily="F25 Executive, sans-serif;"
+          fontFamily="Figtree, sans-serif;"
         >
           {t("button")}
         </Button>
       </Stack>
       </form>
-      <Image src="../frise-logo.png" w="500px" h="150px" />
+      <Hide below="lg">
+      <Image src="../cocktail5.png" w="100px" h="150px"/>
+      </Hide>
+      </Flex>
+      {/* <Image src="../frise-logo.png" w="500px" h="150px" /> */}
+      <Flex gap={{base:"3", md:"9"}} mt={4}>
+        <Image src="../bird1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+        <Image src="../frise-cocktail1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+        <Image src="../frise-cocktail2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+        <Image src="../frise-cocktail3.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+        <Image src="../bird2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+      </Flex>
     </section>
   );
 };

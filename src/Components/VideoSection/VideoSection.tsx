@@ -15,7 +15,7 @@ export const VideoSection = () => {
         position: "relative",
       }}
     >
-      <Flex
+      {/* <Flex
         display={isVisible ? "flex" : "none"}
         direction="row"
         alignItems="center"
@@ -31,7 +31,7 @@ export const VideoSection = () => {
           w="90%"
           align="center"
           color="whitesmoke"
-          fontFamily="revert"
+           fontFamily="Figtree, sans-serif;"
           fontSize={{base: "15px", md:"20px"}}
         >
            {t("announcement")}
@@ -45,7 +45,7 @@ export const VideoSection = () => {
           bg="black"
           icon={<IoCloseSharp color="white" size="20px" />}
         />
-      </Flex>
+      </Flex> */}
 
       <video
         width="100%"

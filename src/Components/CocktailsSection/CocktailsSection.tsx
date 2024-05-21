@@ -107,8 +107,8 @@ const CocktailDetails = ({
               </Flex>
               <Flex gap={5} justifyContent="center" p={4} mt="20px" flexWrap="wrap">
                 {products.map((product, index) => (
-                  <Flex key={product.name}>
-                    {product.icon}
+                  <Flex key={product.name} alignItems="center">
+                    {product.icon} 
                     <Text borderRadius="5px" p={3} color={colorText}>
                       {product.name}
                     </Text>
@@ -116,35 +116,15 @@ const CocktailDetails = ({
                 ))}
               </Flex>
 
-              <Flex direction="row" justifyContent="center" alignContent="center" flexWrap={{base:"wrap", md:"nowrap"}}>
-                {award2 && (
-                  <Flex
-                    direction="row"
-                    alignItems="center"
-                    justifyContent="center"
-                    color={colorText}
-                  >
-                    <Image
-                      src="../medal2.png"
-                      w={{ base: "10", md: "20" }}
-                      h={{ base: "10", md: "20" }}
-                    />
-                    <Text
-                      fontStyle="italic"
-                      fontSize="15px" 
-                    >
-                      "{award2}"
-                    </Text>
-                  </Flex>
-                )}
+              <Flex  justifyContent="space-evenly" alignItems="center" flexWrap={{base:"wrap", md:"nowrap"}}>
 
                 {award && (
                   <Box>
                     <Image src={award} p={10} w="4à0px" h="200px" />
                   </Box>
                 )}
-              </Flex>
-              <Flex direction="row" gap={2} justifyContent="space-evenly">
+              
+              <Flex gap={5}>
               <Button
                 onClick={() => window.open(webUrl)}
                 background={colorText}
@@ -163,6 +143,7 @@ const CocktailDetails = ({
                 Instagram
               </Button>
               </Flex>
+              </Flex>
             </Flex>
           </SlideFade>
         </Flex>
@@ -180,8 +161,10 @@ const CocktailDetails = ({
             <Image
               key={image}
               src={image}
-              w="350px"
-              h="300px"
+              
+              
+              w={{base:"450px", md:"350px"}}
+              h={{base:"350px", md:"300px"}}
               objectFit="cover"
             />
           ))}
@@ -210,19 +193,19 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Ensamble (Espadin & Barril) 42% | 70cl / 100cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../espadin.png" w="125px"  />,
           },
           {
             name: "Tepeztate 47% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../tepeztate.png" w="125px"  />,
           },
           {
             name: "Cuishe 47% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../cuishe.png" w="125px"  />,
           },
           {
             name: "Tobala 47% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../tobala.png" w="125px"  />,
           },
         ]}
         award="./awards-mezcal.png"
@@ -236,6 +219,33 @@ export const CocktailsSection = () => {
         carouselImages={["../Banhez2.jpg", "../Banhez3.jpg", "../Banhez4.jpg"]}
         mainImage="./Banhez1.jpg"
         brandLogo="../banhez-logo.png"
+      />
+      <CocktailDetails
+        colorTheme="#F4B473"
+        colorText="#4F4B49"
+        font="F25 Executive, sans-serif;"
+        webUrl="https://www.odviarmagnac.com/"
+        instaUrl="https://www.instagram.com/odviarmagnac/"
+        products={[
+          {
+            name: "ODVI 42% | 70cl / 75cl / 100cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+          {
+            name: "ODVI Blanche 45% | 70cl / 75cl",
+            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+          },
+        ]}
+        texts={[
+          t("odvi.texts.text1"),
+          t("odvi.texts.text2"),
+          t("odvi.texts.text3"),
+          t("odvi.texts.text4"),
+          
+        ]}
+        carouselImages={["../ODVI2.jpg", "../ODVI3.jpg", "../ODVI4.jpg"]}
+        mainImage="../ODVI1.jpg"
+        brandLogo="../odvi-logo.webp"
       />
       <CocktailDetails
         colorTheme="#F1F1F1"
@@ -265,33 +275,7 @@ export const CocktailsSection = () => {
         brandLogo="../libelula-logo.png"
       />
       
-      <CocktailDetails
-        colorTheme="#F4B473"
-        colorText="#4F4B49"
-        font="F25 Executive, sans-serif;"
-        webUrl="https://www.odviarmagnac.com/"
-        instaUrl="https://www.instagram.com/odviarmagnac/"
-        products={[
-          {
-            name: "ODVI 42% | 70cl / 75cl / 100cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
-          },
-          {
-            name: "ODVI Blanche 45% | 70cl / 75cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
-          },
-        ]}
-        texts={[
-          t("odvi.texts.text1"),
-          t("odvi.texts.text2"),
-          t("odvi.texts.text3"),
-          t("odvi.texts.text4"),
-          
-        ]}
-        carouselImages={["../ODVI2.jpg", "../ODVI3.jpg", "../ODVI4.jpg"]}
-        mainImage="../ODVI1.jpg"
-        brandLogo="../odvi-logo.webp"
-      />
+      
     </section>
   );
 };

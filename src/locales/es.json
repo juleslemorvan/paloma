@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "brands": "Nos macas",
+    "brands": "Nuestras marcas",
     "news": "Nuestras noticias",
     "contact": "Contacto"
   },
@@ -49,10 +49,10 @@
   },
 
   "form" : {
-    "title":"Contacta con nosotros",
+    "title":"Contacta nos",
     "input": {
       "control1":"Eres",
-      "control2":"Nome",
+      "control2":"Nombre",
       "control3":"Correo Electronico",
       "control4":"Mensaje"
     },
@@ -67,11 +67,12 @@
       "option8":"otros"
     },
     "placeholder": {
-      "name": "Su Nome",
-      "email": "su Correo Electronico",
+      "name": "Su Nombre",
+      "email": "Su Correo Electronico",
       "message": "Su mensaje"
     },
-    "button":"Enviar"
+    "button":"Enviar",
+    "conf":"Mensaje enviado, nos comunicaremos con usted lo antes posible."
   }
 
  
