@@ -234,7 +234,7 @@ export const CocktailsSection = () => {
           },
           {
             name: "ODVI Blanche 45% | 70cl / 75cl",
-            icon: <Image src="../../odvi-bottle2.png" w="135px" color="blue"loading="lazy" />,
+            icon: <Image src="../../odvi-bottle2.png" w="125px" color="blue"loading="lazy" />,
           },
         ]}
         texts={[
