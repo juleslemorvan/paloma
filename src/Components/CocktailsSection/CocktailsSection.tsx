@@ -34,6 +34,7 @@ type CocktailDetailsProps = {
   instaUrl: string;
   award?: string;
   award2?: string;
+  speColor?: string
 };
 
 const CocktailDetails = ({
@@ -48,7 +49,7 @@ const CocktailDetails = ({
   webUrl,
   instaUrl,
   award,
-  award2,
+  speColor,
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
@@ -82,7 +83,7 @@ const CocktailDetails = ({
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
             offsetX="-60px"
           >
-            <Image src={mainImage} w={{ base: "400px" }} objectFit="cover" />
+            <Image loading="lazy" src={mainImage} w={{ base: "400px" }} objectFit="cover" />
           </SlideFade>
         </Flex>
         <Flex
@@ -120,7 +121,7 @@ const CocktailDetails = ({
 
                 {award && (
                   <Box>
-                    <Image src={award} p={10} w="4à0px" h="200px" />
+                    <Image src={award} loading="lazy" p={10} w="4à0px" h="200px" />
                   </Box>
                 )}
               
@@ -161,7 +162,7 @@ const CocktailDetails = ({
             <Image
               key={image}
               src={image}
-              
+              loading="lazy"
               
               w={{base:"450px", md:"350px"}}
               h={{base:"350px", md:"300px"}}
@@ -193,19 +194,19 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Ensamble (Espadin & Barril) 42% | 70cl / 100cl",
-            icon: <Image src="../../espadin.png" w="125px"  />,
+            icon: <Image src="../../espadin.png" w="125px" loading="lazy" />,
           },
           {
             name: "Tepeztate 47% | 70cl",
-            icon: <Image src="../../tepeztate.png" w="125px"  />,
+            icon: <Image src="../../tepeztate.png" w="125px" loading="lazy" />,
           },
           {
             name: "Cuishe 47% | 70cl",
-            icon: <Image src="../../cuishe.png" w="125px"  />,
+            icon: <Image src="../../cuishe.png" w="125px" loading="lazy" />,
           },
           {
             name: "Tobala 47% | 70cl",
-            icon: <Image src="../../tobala.png" w="125px"  />,
+            icon: <Image src="../../tobala.png" w="125px" loading="lazy" />,
           },
         ]}
         award="./awards-mezcal.png"
@@ -229,11 +230,11 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "ODVI 42% | 70cl / 75cl / 100cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../odvi-bottle1.png" w="125px" color="blue" loading="lazy"/>,
           },
           {
             name: "ODVI Blanche 45% | 70cl / 75cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../odvi-bottle2.png" w="135px" color="blue"loading="lazy" />,
           },
         ]}
         texts={[
@@ -256,7 +257,7 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Joven 40% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" />,
+            icon: <Image src="../../bottle.png" w="35px" color="blue" loading="lazy"/>,
           },
         ]}
         texts={[

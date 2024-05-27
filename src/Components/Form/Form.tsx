@@ -106,7 +106,7 @@ const form = useRef<HTMLFormElement>(null);
 
       
       <Hide below="lg">
-      <Image src="../cocktail4.png" w="100px" h="150px"/>
+      <Image src="../cocktail4.png" w="100px" h="150px" loading="lazy"/>
       </Hide>
 
         <form  ref={form} onSubmit={sendEmail}>
@@ -186,16 +186,16 @@ const form = useRef<HTMLFormElement>(null);
       </Stack>
       </form>
       <Hide below="lg">
-      <Image src="../cocktail5.png" w="100px" h="150px"/>
+      <Image src="../cocktail5.png" w="100px" h="150px" loading="lazy"/>
       </Hide>
       </Flex>
       {/* <Image src="../frise-logo.png" w="500px" h="150px" /> */}
       <Flex gap={{base:"3", md:"9"}} mt={4}>
-        <Image src="../bird1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
-        <Image src="../frise-cocktail1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
-        <Image src="../frise-cocktail2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
-        <Image src="../frise-cocktail3.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
-        <Image src="../bird2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}}/>
+        <Image src="../bird1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}} loading="lazy"/>
+        <Image src="../frise-cocktail1.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}} loading="lazy"/>
+        <Image src="../frise-cocktail2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}} loading="lazy"/>
+        <Image src="../frise-cocktail3.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}} loading="lazy"/>
+        <Image src="../bird2.png" w={{base:"80px",lg:"100px"}}  h={{base:"80px",md:"120px"}} loading="lazy"/>
       </Flex>
     </section>
   );

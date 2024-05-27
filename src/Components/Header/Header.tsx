@@ -32,6 +32,7 @@ export const Header = () => {
       align="center"
       p={{ base: "30px", xl: "20px" }}
       h={{ base: "16vh", md: "15vh" }}
+      bg="black"
     >
       <Hide below="md">
         <NavBar />
@@ -39,12 +40,12 @@ export const Header = () => {
 
       <Show below="md">
         <Link as={NextLink} href="/" textDecor="none">
-        <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
+        <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" loading="lazy"/>
         </Link>
         <IconButton
           aria-label="open mobile menu"
           onClick={onOpen}
-          icon={<GiHamburgerMenu size={20} />}
+          icon={<GiHamburgerMenu size={20} color="#db9d73"/>}
           style={{ backgroundColor: "transparent" }}
         />
       </Show>
@@ -54,6 +55,7 @@ export const Header = () => {
         isOpen={isOpen}
         onClose={onClose}
         size="full"
+        
       >
         <DrawerOverlay />
         <DrawerContent justifyContent="space-evenly" fontSize="30px">

@@ -12,7 +12,11 @@ type ArticleProps = {
   products: Product[];
   date: string;
   content:string
+  content2?:string
+  content3?:string
   img:string
+  img2?:string
+  img3?:string
   title2?:string
   title3?:string
 };

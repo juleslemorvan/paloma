@@ -7,7 +7,7 @@ import { IoCloseSharp } from "react-icons/io5";
 
 export const VideoSection = () => {
   const [isVisible, setIsVisible] = useState(true);
-  const { t, i18n } = useTranslation("announcement");
+  const { t, i18n } = useTranslation("headlines");
 
   return (
     <section
@@ -77,7 +77,7 @@ export const VideoSection = () => {
               fontFamily= "F25 Executive, sans-serif;"
               fontWeight= "bold"
           >
-            Des Spiritueux craft pour le bar
+           {t("headline1")}
           </Heading>
         </Fade>
         <Fade in transition={{ enter: { delay: 0.5, duration: 2.3 } }}>
@@ -87,8 +87,7 @@ export const VideoSection = () => {
               fontFamily= "F25 Executive, sans-serif;"
        
           >
-            Co-creation & developpement de marques de spiritieux pour le bar,
-            avec les bartenders
+            {t("headline2")}
           </Heading>
         </Fade>
       </Flex>

@@ -31,7 +31,7 @@ const Press = () => {
         justifyContent="center"
         align="center"
       >
-        <Image src="../ny-logo.png" h={"70px"} />
+        <Image src="../ny-logo.png" h={"70px"} loading="lazy"/>
         <Text textAlign={"center"} fontStyle="italic" >
           {t("newyorktimes")}
         </Text>
@@ -44,7 +44,7 @@ const Press = () => {
         justifyContent="center"
         align="center"
       >
-        <Image src="../logo-lefigaro.png" h={"70px"} />
+        <Image src="../logo-lefigaro.png" h={"70px"} loading="lazy"/>
         <Text textAlign={"center"} fontStyle="italic" >
           {t("figaro")}
         </Text>
@@ -57,7 +57,7 @@ const Press = () => {
         justifyContent="center"
         align="center"
       >
-        <Image src="../leshardis-logo.png" h={"80px"} />
+        <Image src="../leshardis-logo.png" h={"80px"} loading="lazy"/>
         <Text textAlign={"center"} fontStyle="italic" >
          {t("hardi")}
         </Text>

@@ -42,7 +42,7 @@ i18n.changeLanguage("en")
      justifyContent={{base:"space-around",md:"space-between"}}
     >
       <Flex >
-        <Link as={NextLink} href="/" textDecor="none">
+        <Link rel="preload" as={NextLink} href="/" textDecor="none">
       <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
       </Link>
       </Flex>
@@ -54,19 +54,19 @@ i18n.changeLanguage("en")
         mr={{base:"0",lg:"175px"}}
         fontFamily="Figtree, sans-serif;"
       >
-        <Link  href="/#cocktails"   _hover={{textDecoration: "none" }} >
+        <Link rel="preload"  href="/#cocktails"   _hover={{textDecoration: "none" }} >
           <Box  letterSpacing={{ base: "0px", md:"1px" }} _hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
              {t("brands")}
           </Box> 
         </Link>
 
-        <Link href="/news" _hover={{textDecoration: "none"}}>
+        <Link rel="preload" href="/news" _hover={{textDecoration: "none"}}>
           <Box letterSpacing={{ base: "0px", md:"1px" }}_hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
             {t("news")}
           </Box>
         </Link>
 
-        <Link href="/#contact"   _hover={{textDecoration: "none"}}>
+        <Link rel="preload" href="/#contact"   _hover={{textDecoration: "none"}}>
           <Box letterSpacing={{ base: "0px", md:"1px" }} _hover={{ fontWeight:"bold"}} transition="ease 0.3s" color="#db9d73">
              {t("contact")}
           </Box>
@@ -76,7 +76,7 @@ i18n.changeLanguage("en")
 
     <Flex display="flex"  mr={{base:"0px",md:"60px"}}>
 
-     <Select value={selectedLanguage} onChange={e => setselectedLanguage(e.target.value)} color="#db9d73" fontWeight="bolder"  boxShadow="10%">
+     <Select value={selectedLanguage} onChange={e => setselectedLanguage(e.target.value)} color="#db9d73" fontWeight="bolder"  boxShadow="10%" border="1px solid black">
         <option value='EN' onSelect={() => i18n.changeLanguage("en")}>EN</option>
         <option value='FR' onSelect={() => i18n.changeLanguage("fr")}>FR</option>
         <option value='ES' onSelect={() => i18n.changeLanguage("es")}>ES</option>
