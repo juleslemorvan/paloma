@@ -21,7 +21,7 @@ type ArticleProps = {
   title3?:string
 };
 
-const Article = ({img, title,title2, title3, products, date, content }: ArticleProps) => {
+const Article = ({img, img2,title,title2, title3, products, date, content, content2 }: ArticleProps) => {
   return (
     <Stack w="100%" as="article" >
         
@@ -39,9 +39,13 @@ const Article = ({img, title,title2, title3, products, date, content }: ArticleP
       <Heading as="h3" fontFamily="F25 Executive,sans-serif;" fontSize="28px">{title2}</Heading>
       <Heading as="h4" fontFamily="F25 Executive, sans-serif;" fontSize="19px">{title3}</Heading>
       <Flex justifyContent="center" alignItems="center">
-        <Image src={img} w="500px" h="300px" objectFit="cover"/>
+        <Image src={img} w="500px" h="300px" objectFit="contain"/>
         </Flex>
-      <Center p="30px" fontFamily="F25 Executive, sans-serif;">{content}</Center>
+      <Text p="10px" fontFamily="F25 Executive, sans-serif;">{content}</Text>
+      <Text p="10px" fontFamily="F25 Executive, sans-serif;">{content2}</Text>
+      <Flex justifyContent="center" alignItems="center">
+        <Image src={img2} w="500px" h="300px" objectFit="cover"/>
+        </Flex>
       <Divider />
     </Stack>
   );
@@ -79,11 +83,11 @@ const news = () => {
             <Article
                 products={[
                 {
-                 name: "Libelula",
+                 name: "Lisbon Bar Show 2024",
                  color: "blue",
                 },
                 {
-                 name: "meeting",
+                 name: "meetings",
                  color: "red",
                 },
                 {
@@ -91,15 +95,15 @@ const news = () => {
                  color: "green",
                 },
                 ]}
-                title="Mon premier article"
-                title2="Title2"
-                title3="Title3"
-                date="April 01, 2023"
-                content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
-                img="https://picsum.photos/300"
+                title="All the Paloma team attended the Lisbon Bar Show 2024 !"
+                date="May 19th, 2024"
+                img="./lisbon-bar-logo.png"
+                img2="./lisbon-bar-show.jpg"
+                content="This month, all the team met up in Portugal for the Lisbon Bar show. It was a good occasion to meet our Spanish partners."
+                content2="Portugal will be a priority for the development of Paloma Spirits as one of our founders is based there. Lisbon is also booming with so many openings of cool cocktail bars.
+                We met many Portuguese importers and we hope to start developing our brands there early 2025. Stay tuned !"
             />
-
-             <Article
+            {/* <Article
                 products={[
                 {
                  name: "Banhez",
@@ -120,7 +124,9 @@ const news = () => {
                 date="April 03, 2024"
                 content="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
                 img="https://picsum.photos/800"
-            />
+            /> */}
+
+
 
         </VStack>
         
