@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { Providers } from "../providers";
+import GoogleAnalytics from "@/Components/GoogleAnalytic/GoogleAnalytic";
 
 export const metadata: Metadata = {
   title: "Paloma Spirits",
@@ -18,6 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body>
         <Providers>{children}</Providers>
       </body>

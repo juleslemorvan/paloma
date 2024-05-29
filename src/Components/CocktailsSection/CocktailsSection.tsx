@@ -21,6 +21,8 @@ type Product = {
   icon: React.ReactElement;
 };
 
+
+
 type CocktailDetailsProps = {
   colorTheme: string;
   colorText: string;
@@ -34,7 +36,8 @@ type CocktailDetailsProps = {
   instaUrl: string;
   award?: string;
   award2?: string;
-  speColor?: string
+  speColor?: string;
+  brand:string
 };
 
 const CocktailDetails = ({
@@ -49,7 +52,8 @@ const CocktailDetails = ({
   webUrl,
   instaUrl,
   award,
-  speColor,
+  brand
+
 }: CocktailDetailsProps) => {
   const myRef = useRef<HTMLDivElement | null>(null);
   const { inViewport, enterCount, leaveCount } = useInViewport(myRef);
@@ -71,6 +75,7 @@ const CocktailDetails = ({
         aspectRatio={16 / 9}
         maxH="150px"
         objectFit="contain"
+        alt={brand}
       />
       <Flex
         flexDirection={{ base: "column", lg: "row" }}
@@ -187,6 +192,7 @@ export const CocktailsSection = () => {
     >
       <CocktailDetails
         colorTheme="#2B3D47"
+        brand="logo de la marque Banhez mezcal"
         colorText="#FFFFFF"
         font="F25 Executive, sans-serif;"
         webUrl="https://www.banhezmezcal.com/"
@@ -194,19 +200,22 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Ensamble (Espadin & Barril) 42% | 70cl / 100cl",
-            icon: <Image src="../../espadin.png" w="125px" loading="lazy" />,
+            icon: <Image src="../../espadin.png" w="125px" loading="lazy" alt= "image d'une bouteille de espadin"/>,
+            
           },
           {
             name: "Tepeztate 47% | 70cl",
-            icon: <Image src="../../tepeztate.png" w="125px" loading="lazy" />,
+            icon: <Image src="../../tepeztate.png" w="125px" loading="lazy" alt= "image d'une bouteille de Tepeztate"/>,
           },
           {
             name: "Cuishe 47% | 70cl",
-            icon: <Image src="../../cuishe.png" w="125px" loading="lazy" />,
+            icon: <Image src="../../cuishe.png" w="125px" loading="lazy" alt="image d'une bouteille de cuishe "/>,
+            
           },
           {
             name: "Tobala 47% | 70cl",
-            icon: <Image src="../../tobala.png" w="125px" loading="lazy" />,
+            icon: <Image src="../../tobala.png" w="125px" loading="lazy" alt= "image d'une bouteille de Tobala "/>,
+            
           },
         ]}
         award="./awards-mezcal.png"
@@ -224,17 +233,20 @@ export const CocktailsSection = () => {
       <CocktailDetails
         colorTheme="#F4B473"
         colorText="#4F4B49"
+        brand="odvi armagnac"
         font="F25 Executive, sans-serif;"
         webUrl="https://www.odviarmagnac.com/"
         instaUrl="https://www.instagram.com/odviarmagnac/"
         products={[
           {
             name: "ODVI 42% | 70cl / 75cl / 100cl",
-            icon: <Image src="../../odvi-bottle1.png" w="125px" color="blue" loading="lazy"/>,
+            icon: <Image src="../../odvi-bottle1.png" w="125px" color="blue" loading="lazy" alt= "image d'une bouteille d'ODVI "/>,
+            
           },
           {
             name: "ODVI Blanche 45% | 70cl / 75cl",
-            icon: <Image src="../../odvi-bottle2.png" w="125px" color="blue"loading="lazy" />,
+            icon: <Image src="../../odvi-bottle2.png" w="125px" color="blue"loading="lazy" alt="image d'une bouteille d'ODVI blanche "/>,
+            
           },
         ]}
         texts={[
@@ -251,13 +263,15 @@ export const CocktailsSection = () => {
       <CocktailDetails
         colorTheme="#F1F1F1"
         colorText="#375172"
+        brand="libelula tequila"
         font="F25 Executive, sans-serif;"
         webUrl="https://www.libelulatequila.com/"
         instaUrl="https://www.instagram.com/libelula_tequila/"
         products={[
           {
             name: "Joven 40% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" loading="lazy"/>,
+            icon: <Image src="../../bottle.png" w="35px" color="blue" loading="lazy" alt="image d'une bouteille de Joven "/>,
+            
           },
         ]}
         texts={[
