@@ -270,7 +270,7 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Joven 40% | 70cl",
-            icon: <Image src="../../bottle.png" w="35px" color="blue" loading="lazy" alt="image d'une bouteille de Joven "/>,
+            icon: <Image src="../../libelula-bottle.png" w="35px" color="blue" loading="lazy" alt="image d'une bouteille de Joven "/>,
             
           },
         ]}
