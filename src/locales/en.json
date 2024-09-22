@@ -15,6 +15,13 @@
     },
 
   "cocktails": {
+    "aluzar": {
+      "texts": {
+        "text1": "Aluzar Tequila celebrates the time-honored and precise methods that are the hallmark of true quality. It is produced by Francisco Villegas Sandoval, Maestro Tequilero from Los Magos Distillery in Jalisco. Aluzar is a 100% blue agave Tequila crafted without additives, allowing the natural essence of the agave to shine through. This purity ensures that Aluzar maintains its authentic character. The meticulous attention to detail in both harvesting and distillation processes distinguish Aluzar as a premium tequila, resulting in a spirit that truly reflects the terroir and heritage of its production More than just a spirit, Aluzar is a celebration of light . It embodies the radiance of Mexico’s vibrant landcapes, from sunlit agave fields to the warmth of community gatherings.",
+        "text2": "Every bottle invites to explore not just the taste of an authentic, well-crafted tequila, but also the stories and traditions behind it. The poetic essence of the brand speaks of glowing memories, illuminated by the legacy of Mexico’s agave culture, and brings these experiences to life for those who seek quality and authenticity.",
+        "text3": "Aluzar positions itself as a versatile, accessible tequila suitable for any occasion, whether enjoyed neat or in cocktails."
+      }
+    },
     "banhez": {
       "texts": {
         "text1": "Banhez Mezcal is crafted using traditional methods passed down through generations in Oaxaca, Mexico. Its authentic production process, including hand-harvesting agave and artisanal distillation techniques, appeals to consumers seeking an authentic mezcal experience.",

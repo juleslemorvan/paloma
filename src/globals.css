@@ -1,6 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/f25-executive');
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
+@font-face {
+    font-family: 'Souvenir';
+    src: url('/font/Souvenir/Souvenir-Medium.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     text-decoration: none;
@@ -14,6 +20,8 @@ body {
     padding: 0;   
     
 }
+
+
 
 :root {
     display: flex;

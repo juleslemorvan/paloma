@@ -10,11 +10,18 @@
     },
 
      "headlines": {
-      "headline1": "Selección exclusiva de licores artesanales",
-      "headline2": "apoyando a los bartenders en su enfoque creativo y su búsqueda de la excelencia."
+      "headline1": "Selección exclusiva de destilados artesanales",
+      "headline2": "apoyando la creatividad de los bartenders y su búsqueda de la excelencia."
     },
 
   "cocktails": {
+    "aluzar": {
+      "texts": {
+        "text1": "Aluzar Tequila celebra los métodos precisos y consagrados que son el sello de la verdadera calidad. Es producido por Francisco Villegas Sandoval, Maestro Tequilero de Destilería Los Magos en Jalisco.",
+        "text2": "Aluzar es un tequila 100% de agave azul elaborado sin aditivos, lo que permite que brille la esencia natural del agave. Esta pureza asegura que Aluzar mantenga su carácter auténtico.",
+        "text3": "La meticulosa atención al detalle tanto en los procesos de cosecha como de destilación distingue a Aluzar como un tequila premium, lo que da como resultado una bebida espirituosa que verdaderamente refleja el terruño y la herencia de su producción."
+      }
+    },
     "banhez": {
       "texts": {
         "text1": "Ubicada en el pintoresco pueblo de San Miguel Ejutla, en el corazón del Valle Central de Oaxaca, se encuentra una cooperativa impulsada por la tradición y la sostenibilidad. La Unión Productores de Agropecuarios del Distrito de Ejutla de Crespo (UPADEC), compuesta por más de 55 familias, se dedica al arte de la producción de mezcal de comercio justo, haciéndose eco de los métodos transmitidos por sus antepasados durante casi dos siglos.",
@@ -37,7 +44,7 @@
         "text1": "ODVI Armagnac es conocido por su dedicación a la elaboración de expresiones de Armagnac adaptadas a los mixólogos, con el objetivo de encender su creatividad al preparar cócteles innovadores de Armagnac. A través de una cuidadosa mezcla de aguardientes, ODVI logra un producto final armonioso, intrincado y bien equilibrado, que incita a los cocteleros a profundizar en el mundo del Brandy.",
         "text2": "ODVI ofrece una gama de expresiones de Armagnac que se adaptan a diferentes preferencias y ocasiones. Ya sea que prefiera un Armagnac joven, añejo y vibrante o un Armagnac sin añejar, más floral y afrutado, ODVI tiene una variedad de opciones para elegir, cada una de las cuales muestra el compromiso de la marca con la calidad y la excelencia.",
         "text3": "ODVI Blanche, un Armagnac sin añejar con 45% ABV, captura la esencia pura de la uva sin la influencia del roble. Destilado en el suroeste de Francia a partir de una mezcla única de 55% Baco y 45% Ugni Blanc, este Blanche Armagnac se somete a un breve período de maduración en damajuanas de vidrio y tanques de acero inoxidable, lo que da como resultado un licor lleno de frescura y vitalidad afrutada.",
-        "text4": "Pendant ce temps, l'Armagnac vieilli ODVI est une fusion de tradition et de modernité. Il s'agit d'un assemblage de trois cépages (45 % Baco, 40 % Ugni Blanc et 15 % Folle Blanche), ODVI 2 ans d'âge offre une bouche fraîche et fruitée avec une touche poivrée et des notes captivantes de pruneau et de pêche."
+        "text4": "Mientras tanto, ODVI Armagnac sirve como una fusión de tradición y modernidad es una mezcla de tres variedades de uva (45% Baco, 40% Ugni Blanc y 15% Folle Blanche), ODVI 2 años de envejecimiento en barrica francesa ofrece un paladar fresco y frutal con un toque picante y notas cautivadoras de ciruela pasa y melocotón."
       },
       "ranges": {
         "range1":"ODVI Blanche is an unaged Armagnac at 45% Abv. Distilled in the southwest of France with a unique blend of 55% Baco and 45% Ugni Blanc, this Blanche Armagnac captures the very essence of the grape without the influence of oak. Briefly matured in glass demijohns and stainless steel tanks, it shines with freshness and fruity intensity.",

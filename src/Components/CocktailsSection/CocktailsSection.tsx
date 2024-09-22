@@ -23,6 +23,7 @@ type Product = {
 
 
 
+
 type CocktailDetailsProps = {
   colorTheme: string;
   colorText: string;
@@ -78,23 +79,24 @@ const CocktailDetails = ({
         alt={brand}
       />
       <Flex
-        flexDirection={{ base: "column", lg: "row" }}
+        flexDirection={{ base: "column", xl: "row" }}
         gap={{ base: 10, lg: 0 }}
-        alignItems={{ base: "center", lg: "flex-start" }}
+        alignItems={{ base: "center", xl: "flex-start" }}
+        
       >
-        <Flex flex={1} px={10}>
+        <Flex px={10}>
           <SlideFade
             in={isVisible}
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
             offsetX="-60px"
           >
-            <Image loading="lazy" src={mainImage} w={{ base: "400px" }} objectFit="cover" />
+            <Image loading="lazy" src={mainImage} w={{ base: "400px" }} h="100%" objectFit="cover" />
           </SlideFade>
         </Flex>
         <Flex
           minW={{ base: "400px" }}
           ref={myRef}
-          flex={2}
+          flex={1}
           overflow="hidden"
           px={10}
         >
@@ -111,9 +113,9 @@ const CocktailDetails = ({
                   </Text>
                 ))}
               </Flex>
-              <Flex gap={5} justifyContent="center" p={4} mt="20px" flexWrap="wrap">
+              <Flex gap={5} justifyContent="center" p={4} mt="10px" flexWrap="wrap">
                 {products.map((product, index) => (
-                  <Flex key={product.name} alignItems="center">
+                  <Flex key={product.name} alignItems="center" direction={{base:"column",md:"column"}}>
                     {product.icon} 
                     <Text borderRadius="5px" p={3} color={colorText}>
                       {product.name}
@@ -126,7 +128,7 @@ const CocktailDetails = ({
 
                 {award && (
                   <Box>
-                    <Image src={award} loading="lazy" p={10} w="4à0px" h="200px" />
+                    <Image src={award} loading="lazy" p={10}  h="200px" />
                   </Box>
                 )}
               
@@ -190,6 +192,44 @@ export const CocktailsSection = () => {
       }}
       id="cocktails"
     >
+      <CocktailDetails
+        colorTheme="#FFF2CC"
+        brand="logo de la marque Aluzar"
+        colorText="#264D38"
+        font="Souvenir, sans-serif;"
+        webUrl="https://www.banhezmezcal.com/"
+        instaUrl="https://www.instagram.com/banhezmezcalartesanal/"
+        products={[
+          {
+            name: "Blanco 40% | 70cl / 100cl",
+            icon: <Image src="../../aluzar-blanco.png" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco"/>,
+            
+          },
+          {
+            name: "Blanco Alta Graduación 50% | 70cl",
+            icon: <Image src="../../aluzar-blanco-alta.png" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco Alta Graduación"/>,
+            
+          },
+          {
+            name: "Reposado 40% | 70cl / 100cl",
+            icon: <Image src="../../aluzar-reposado.png" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Reposado"/>,
+            
+          },
+         
+        ]}
+        
+       
+        texts={[
+          t("aluzar.texts.text1"),
+          t("aluzar.texts.text2"),
+          t("aluzar.texts.text3"),
+          
+        ]}
+        carouselImages={["../aluzar2.png", "../aluzar4.png", "../aluzar3.png"]}
+        mainImage="./aluzar1.png"
+        brandLogo="../logo-aluzar.png"
+      />
+
       <CocktailDetails
         colorTheme="#2B3D47"
         brand="logo de la marque Banhez mezcal"

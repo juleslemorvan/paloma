@@ -15,6 +15,13 @@
     },
 
   "cocktails": {
+     "aluzar": {
+      "texts": {
+        "text1": "Aluzar Tequila célèbre les méthodes ancestrales qui sont la marque de la véritable qualité. Elle est produite par Francisco Villegas Sandoval, Maestro Tequilero de la distillerie Los Magos à Jalisco. Aluzar est une tequila 100 % agave bleue fabriquée sans additifs, permettant à l'essence naturelle de l'agave de transparaître. Cette pureté garantit qu'Aluzar conserve son caractère authentique. L'attention méticuleuse portée aux détails dans les processus de récolte et de distillation distingue Aluzar comme une tequila haut de gamme, résultant en un spiritueux qui reflète véritablement le terroir et l'héritage de sa production. Plus qu'un simple clin d'oeil, Aluzar est une célébration de la lumière. Elle incarne l’éclat des paysages vibrants du Mexique, des champs d’agave ensoleillés à la chaleur des moments partagés.",
+        "text2": "Chaque bouteille invite à explorer non seulement le goût d'une tequila authentique et bien conçue, mais aussi les histoires et les traditions qui la sous-tendent.",
+        "text3": "L’essence poétique de la marque parle de souvenirs éclatants, illuminés par l’héritage de la culture de l’agave du Mexique, et donne vie à ces expériences pour ceux qui recherchent la qualité et l’authenticité."
+      }
+    },
     "banhez": {
       "texts": {
         "text1": "Nichée dans le village pittoresque de San Miguel Ejutla, au cœur de la vallée centraled'Oaxaca, se trouve une coopérative alimentée par la tradition et la durabilité. Composée deplus de 55 familles, l'Unión Productores de Agropecuarios del Distrito de Ejutla de Crespo(UPADEC) se consacre à l'art de la production de mezcal équitable, faisant écho auxméthodes transmises par leurs ancêtres depuis près de deux siècles.",
