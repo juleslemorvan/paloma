@@ -33,8 +33,8 @@ type CocktailDetailsProps = {
   mainImage: string;
   carouselImages: string[];
   products: Product[];
-  webUrl: string;
-  instaUrl: string;
+  webUrl?: string;
+  instaUrl?: string;
   award?: string;
   award2?: string;
   speColor?: string;
@@ -131,8 +131,8 @@ const CocktailDetails = ({
                     <Image src={award} loading="lazy" p={10}  h="200px" />
                   </Box>
                 )}
-              
-              <Flex gap={5}>
+              {webUrl && (
+                  <Flex gap={5}>
               <Button
                 onClick={() => window.open(webUrl)}
                 background={colorText}
@@ -151,6 +151,8 @@ const CocktailDetails = ({
                 Instagram
               </Button>
               </Flex>
+              )}
+              
               </Flex>
             </Flex>
           </SlideFade>
@@ -197,8 +199,7 @@ export const CocktailsSection = () => {
         brand="logo de la marque Aluzar"
         colorText="#264D38"
         font="Souvenir, sans-serif;"
-        webUrl="https://www.banhezmezcal.com/"
-        instaUrl="https://www.instagram.com/banhezmezcalartesanal/"
+        
         products={[
           {
             name: "Blanco 40% | 70cl / 100cl",
