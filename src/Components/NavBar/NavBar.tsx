@@ -43,7 +43,7 @@ i18n.changeLanguage("en")
     >
       <Flex >
         <Link rel="preload" as={NextLink} href="/" textDecor="none">
-      <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" />
+      <Image src="../logopaloma.webp" w="180px" h="90px" m="0px 20px" />
       </Link>
       </Flex>
       <Stack

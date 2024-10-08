@@ -62,8 +62,8 @@ const news = () => {
       >
         <Hide below="md">
          <Flex width="100%" justifyContent="space-around" alignItems="center" bg="#92977E" py={4}>
-                    <Image src="./banhez-logo.png" w={{base:"50px",md:"200px"}} h="100px"/>
-                    <Image src="./libelula-logo.png" w="200px" h="100px"/>
+                    <Image src="./banhez-logo.webp" w={{base:"50px",md:"200px"}} h="100px"/>
+                    <Image src="./libelula-logo.webp" w="200px" h="100px"/>
                     <Image src="./odvi-logo.webp" w="200px" h="100px"/>
             </Flex>
 </Hide>
@@ -97,8 +97,8 @@ const news = () => {
                 ]}
                 title="All the Paloma team attended the Lisbon Bar Show 2024 !"
                 date="May 19th, 2024"
-                img="./lisbon-bar-logo.png"
-                img2="./lisbon-bar-show.jpg"
+                img="./lisbon-bar-logo.webp"
+                img2="./lisbon-bar-show.webp"
                 content="This month, all the team met up in Portugal for the Lisbon Bar show. It was a good occasion to meet our Spanish partners."
                 content2="Portugal will be a priority for the development of Paloma Spirits as one of our founders is based there. Lisbon is also booming with so many openings of cool cocktail bars.
                 We met many Portuguese importers and we hope to start developing our brands there early 2025. Stay tuned !"
