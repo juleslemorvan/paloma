@@ -15,13 +15,16 @@ type ArticleProps = {
   content2?:string
   content3?:string
   img:string
+  alt:string
   img2?:string
+  alt2?:string
   img3?:string
+  alt3?:string
   title2?:string
   title3?:string
 };
 
-const Article = ({img, img2,title,title2, title3, products, date, content, content2 }: ArticleProps) => {
+const Article = ({img,alt, img2,alt2,title,title2, title3, products, date, content, content2 }: ArticleProps) => {
   return (
     <Stack w="100%" as="article" >
         
@@ -39,12 +42,12 @@ const Article = ({img, img2,title,title2, title3, products, date, content, conte
       <Heading as="h3" fontFamily="F25 Executive,sans-serif;" fontSize="28px">{title2}</Heading>
       <Heading as="h4" fontFamily="F25 Executive, sans-serif;" fontSize="19px">{title3}</Heading>
       <Flex justifyContent="center" alignItems="center">
-        <Image src={img} w="500px" h="300px" objectFit="contain"/>
+        <Image src={img} alt={alt} w="500px" h="300px" objectFit="contain"/>
         </Flex>
       <Text p="10px" fontFamily="F25 Executive, sans-serif;">{content}</Text>
       <Text p="10px" fontFamily="F25 Executive, sans-serif;">{content2}</Text>
       <Flex justifyContent="center" alignItems="center">
-        <Image src={img2} w="500px" h="300px" objectFit="cover"/>
+        <Image src={img2} alt={alt2} w="500px" h="300px" objectFit="cover"/>
         </Flex>
       <Divider />
     </Stack>
@@ -62,9 +65,9 @@ const news = () => {
       >
         <Hide below="md">
          <Flex width="100%" justifyContent="space-around" alignItems="center" bg="#92977E" py={4}>
-                    <Image src="./banhez-logo.webp" w={{base:"50px",md:"200px"}} h="100px"/>
-                    <Image src="./libelula-logo.webp" w="200px" h="100px"/>
-                    <Image src="./odvi-logo.webp" w="200px" h="100px"/>
+                    <Image src="./banhez-logo.webp" alt="logo of Banhez mezcal" w={{base:"50px",md:"200px"}} h="100px"/>
+                    <Image src="./libelula-logo.webp" alt="logo of Libelula tequila" w="200px" h="100px"/>
+                    <Image src="./odvi-logo.webp" alt="logo of Odvi armagnac" w="200px" h="100px"/>
             </Flex>
 </Hide>
         <Flex direction="column"  justifyContent="center" alignItems="center" bg="whitesmoke" h="30vh">
@@ -98,7 +101,9 @@ const news = () => {
                 title="All the Paloma team attended the Lisbon Bar Show 2024 !"
                 date="May 19th, 2024"
                 img="./lisbon-bar-logo.webp"
+                alt="image of lisbon bar"
                 img2="./lisbon-bar-show.webp"
+                alt2="image of lisbon bar show"
                 content="This month, all the team met up in Portugal for the Lisbon Bar show. It was a good occasion to meet our Spanish partners."
                 content2="Portugal will be a priority for the development of Paloma Spirits as one of our founders is based there. Lisbon is also booming with so many openings of cool cocktail bars.
                 We met many Portuguese importers and we hope to start developing our brands there early 2025. Stay tuned !"

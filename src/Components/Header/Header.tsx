@@ -40,7 +40,7 @@ export const Header = () => {
 
       <Show below="md">
         <Link as={NextLink} href="/" textDecor="none">
-        <Image src="../logopaloma.png" w="180px" h="90px" m="0px 20px" loading="lazy"/>
+        <Image src="../logopaloma.webp" alt="logo de Paloma Spirits" w="180px" h="90px" m="0px 20px" loading="lazy"/>
         </Link>
         <IconButton
           aria-label="open mobile menu"

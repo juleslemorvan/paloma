@@ -91,7 +91,7 @@ const CocktailDetails = ({
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
             offsetX="-60px"
           >
-            <Image loading="lazy" src={mainImage} w={{ base: mainImageSize }} h="100%" objectFit="cover" />
+            <Image loading="lazy" src={mainImage} alt="Image de décuration mettant en avant le produit" w={{ base: mainImageSize }} h="100%" objectFit="cover" />
           </SlideFade>
         </Flex>
         <Flex
@@ -129,7 +129,7 @@ const CocktailDetails = ({
 
                 {award && (
                   <Box>
-                    <Image src={award} loading="lazy" p={10}  h="200px" />
+                    <Image src={award} alt="golden award 2017 for the San Francisco World Spirit Competition " loading="lazy" p={10}  h="200px" />
                   </Box>
                 )}
               {webUrl && (
