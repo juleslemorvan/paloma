@@ -1,5 +1,5 @@
 import { Header } from "@/Components/Header/Header";
-import { Badge, Box, Center, Divider, Flex, Heading, Hide, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import { Badge, Box, Divider, Flex, Heading, Hide, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import React from "react";
 
 type Product = {
