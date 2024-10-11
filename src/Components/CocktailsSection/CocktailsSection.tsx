@@ -82,18 +82,18 @@ const CocktailDetails = ({
       <Image src={brandLogo} alt={brand} height="150px" width="300px" m={5} />
       
       <Flex
-        flexDirection={{ base: "column", xl: "row" }}
+        flexDirection={{ base: "column", lg: "row" }}
         gap={{ base: 10, lg: 0 }}
         alignItems={{ base: "center", xl: "flex-start" }}
         
       >
-        <Flex px={10}>
+        <Flex px={10}  >
           <SlideFade
             in={isVisible}
             transition={{ enter: { delay: 0.3, duration: 0.5 } }}
             offsetX="-60px"
           >
-            <Image loading="lazy" src={mainImage} alt="decoration of the product bottle " w={{ base: mainImageSize }} h="100%" objectFit="cover" />
+            <Image loading="lazy" src={mainImage} alt="decoration of the product bottle" w={{ base: mainImageSize }} h="100%" objectFit="cover" />
           </SlideFade>
         </Flex>
         <Flex
@@ -141,6 +141,8 @@ const CocktailDetails = ({
                 background={colorText}
                 color={colorTheme}
                 fontFamily="F25 Executive, sans-serif;"
+                fontWeight="bolder"
+                _hover={{ color: "black"}}
               >
                  {t("website")}
               </Button>
@@ -150,6 +152,7 @@ const CocktailDetails = ({
                 onClick={() => window.open(instaUrl)}
                 leftIcon={<FaInstagram size={20} />}
                 fontFamily="F25 Executive, sans-serif;"
+                _hover={{ color: "black"}}
               >
                 Instagram
               </Button>
@@ -203,7 +206,8 @@ export const CocktailsSection = () => {
         brand="logo de la marque Aluzar"
         colorText="#264D38"
         font="Souvenir, sans-serif;"
-        
+        webUrl="https://www.odviarmagnac.com/"
+        instaUrl="https://www.instagram.com/odviarmagnac/"
         products={[
           {
             name: "Blanco 40% | 70cl / 100cl",
@@ -230,9 +234,9 @@ export const CocktailsSection = () => {
           t("aluzar.texts.text3"),
           
         ]}
-        carouselImages={["../aluzar2.webp", "../aluzar4.webp", "../aluzar3.webp"]}
-        mainImage="./aluzar1.webp"
-        mainImageSize="300px"
+        carouselImages={["../aluzar3.webp", "../aluzar4.webp", "../aluzar2.webp"]}
+        mainImage="./aluzar15.png"
+        mainImageSize="400px"
         brandLogo="../logo-aluzar.webp"
       />
 
