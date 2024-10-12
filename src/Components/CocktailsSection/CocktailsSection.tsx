@@ -82,7 +82,7 @@ const CocktailDetails = ({
       <Image src={brandLogo} alt={brand} height="150px" width="300px" m={5} />
       
       <Flex
-        flexDirection={{ base: "column", lg: "row" }}
+        flexDirection={{ base: "column", xl: "row" }}
         gap={{ base: 10, lg: 0 }}
         alignItems={{ base: "center", xl: "flex-start" }}
         
@@ -235,7 +235,7 @@ export const CocktailsSection = () => {
           
         ]}
         carouselImages={["../aluzar3.webp", "../aluzar4.webp", "../aluzar2.webp"]}
-        mainImage="./aluzar15.png"
+        mainImage="./aluzar15.webp"
         mainImageSize="400px"
         brandLogo="../logo-aluzar.webp"
       />

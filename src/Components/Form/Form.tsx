@@ -28,35 +28,42 @@ const Form = () => {
 
   const form = useRef<HTMLFormElement>(null);
 
-  // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-  //   const currentForm = form.current;
-  //   if (currentForm == null) return;
-  //   emailjs
-  //     .sendForm(
-  //       "service_yyq3d7j",
-  //       "template_tlerafb",
-  //       currentForm,
-  //       "eWDMxaVvHwEsa1jUR"
-  //     )
-  //     .then(
-  //       (result) => {
-  //         toast({
-  //           title: t("conf"),
-  //           status: "success",
-  //           duration: 2000,
-  //           isClosable: false,
-  //           position: "bottom",
-  //         });
-  //         setIsLoading(false);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  //   e.currentTarget.reset();
-  // };
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+    const currentForm = form.current;
+    if (currentForm == null) return;
+    const formData = new FormData(currentForm);
+  console.log({
+    type: formData.get("type"),
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+  });
+    emailjs
+      .sendForm(
+        "service_yyq3d7j",
+        "template_tlerafb",
+        currentForm,
+        "eWDMxaVvHwEsa1jUR"
+      )
+      .then(
+        (result) => {
+          toast({
+            title: t("conf"),
+            status: "success",
+            duration: 2000,
+            isClosable: false,
+            position: "bottom",
+          });
+          setIsLoading(false);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.currentTarget.reset();
+  };
 
   return (
     <section
@@ -115,13 +122,13 @@ const Form = () => {
           />
         </Hide>
 
-        <form ref={form} >
-          {/* onSubmit={sendEmail} */}
+        <form ref={form} onSubmit={sendEmail}>
+          
           <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
             <FormLabel htmlFor="identity" fontFamily="Figtree, sans-serif;" id="identity">
               {t("input.control1")}
               <Select
-                name="type"
+                name="text"
                 isRequired
                 placeholder={t("options.option1")}
                 aria-label="type"
@@ -141,7 +148,7 @@ const Form = () => {
                 {t("input.control2")}
               </FormLabel>
               <Input
-                type="name"
+                type="text"
                 id="first-name"
                 placeholder={t("placeholder.name")}
                 aria-label="name"
@@ -245,3 +252,4 @@ const Form = () => {
 };
 
 export default Form;
+
