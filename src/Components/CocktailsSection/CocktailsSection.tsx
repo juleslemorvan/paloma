@@ -206,8 +206,8 @@ export const CocktailsSection = () => {
         brand="logo de la marque Aluzar"
         colorText="#264D38"
         font="Souvenir, sans-serif;"
-        webUrl="https://www.odviarmagnac.com/"
-        instaUrl="https://www.instagram.com/odviarmagnac/"
+        webUrl="https://aluzartequila.com/"
+        instaUrl="https://www.instagram.com/aluzar.tequila/"
         products={[
           {
             name: "Blanco 40% | 70cl / 100cl",
