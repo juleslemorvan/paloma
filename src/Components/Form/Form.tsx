@@ -35,7 +35,7 @@ const Form = () => {
     if (currentForm == null) return;
     const formData = new FormData(currentForm);
   console.log({
-    type: formData.get("type"),
+    type: formData.get("identity"),
     name: formData.get("name"),
     email: formData.get("email"),
     message: formData.get("message"),
@@ -128,10 +128,10 @@ const Form = () => {
             <FormLabel htmlFor="identity" fontFamily="Figtree, sans-serif;" id="identity">
               {t("input.control1")}
               <Select
-                name="text"
+                name="identity"
                 isRequired
                 placeholder={t("options.option1")}
-                aria-label="type"
+                aria-label="identity"
                 style={{ borderColor: "#355995" }}
               >
                 <option>{t("options.option2")}</option>
@@ -151,8 +151,8 @@ const Form = () => {
                 type="text"
                 id="first-name"
                 placeholder={t("placeholder.name")}
-                aria-label="name"
-                name="name"
+                aria-label="first-name"
+                name="first-name"
                 style={{ borderColor: "#355995" }}
                 autoComplete="off"
               />
@@ -167,7 +167,7 @@ const Form = () => {
                 id="mail"
                 placeholder={t("placeholder.email")}
                 aria-label="email"
-                name="email"
+                name="mail"
                 style={{ borderColor: "#355995" }}
                 autoComplete="off"
               />
