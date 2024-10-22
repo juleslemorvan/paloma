@@ -93,13 +93,13 @@ export const NavBar = () => {
           boxShadow="10%"
           border="1px solid black"
         >
-          <option value="EN" onSelect={() => i18n.changeLanguage("en")}>
+          <option value="EN" onSelect={() => i18n.changeLanguage("en")} id="EN">
             EN
           </option>
-          <option value="FR" onSelect={() => i18n.changeLanguage("fr")}>
+          <option value="FR" onSelect={() => i18n.changeLanguage("fr")} id="FR">
             FR
           </option>
-          <option value="ES" onSelect={() => i18n.changeLanguage("es")}>
+          <option value="ES" onSelect={() => i18n.changeLanguage("es")} id="ES">
             ES
           </option>
         </Select>

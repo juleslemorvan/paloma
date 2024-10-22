@@ -1,4 +1,5 @@
 
+
 export default function CustomHead() {
   return (
     <>
@@ -9,7 +10,7 @@ export default function CustomHead() {
       <meta property="og:type" content="website" />
       {/* <meta name="twitter:creator" content="@TonTwitterHandle" /> */}
       <link rel="canonical" href="https://www.palomaspirits.com/page-actuelle" />
-    
+      <link rel="shortcut icon" href="../../public/flavicon.png" /> 
     </>
   );
 }
