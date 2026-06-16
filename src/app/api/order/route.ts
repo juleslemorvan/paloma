@@ -65,7 +65,7 @@ async function findOrCreateCustomer(
 
   const created = createRes?.data?.customerCreate;
   if (!created || created?.errors?.length > 0) {
-    throw new Error(`Customer create error: ${JSON.stringify(created?.errors)}`);
+    throw new Error(`Customer create error: ${JSON.stringify(created?.errors)} | full: ${JSON.stringify(createRes)}`);
   }
 
   return created.data.customerId;
