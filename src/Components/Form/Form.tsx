@@ -76,7 +76,7 @@ const Form = () => {
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        fontFamily: "Figtree, sans-serif;",
+        fontFamily: "Figtree, sans-serif",
       }}
       id="contact"
     >
@@ -99,7 +99,7 @@ const Form = () => {
           as="h2"
           fontWeight="bold"
           textAlign="center"
-          fontFamily="Figtree, sans-serif;"
+          fontFamily="Figtree, sans-serif"
           my="20px"
         >
           {t("title")}
@@ -114,7 +114,7 @@ const Form = () => {
       >
         <Hide below="lg">
           <Image
-            src="../cocktail4.webp"
+            src="/cocktail4.webp"
             alt="decoration image of a cocktail"
             w="100px"
             h="150px"
@@ -125,7 +125,7 @@ const Form = () => {
         <form ref={form} onSubmit={sendEmail}>
           
           <Stack spacing={5} w={{ base: "300px", md: "500px" }}>
-            <FormLabel htmlFor="identity" fontFamily="Figtree, sans-serif;" id="identity">
+            <FormLabel htmlFor="identity" fontFamily="Figtree, sans-serif" id="identity">
               {t("input.control1")}
               <Select
                 name="identity"
@@ -144,7 +144,7 @@ const Form = () => {
               </Select>
             </FormLabel>
             <FormControl isRequired>
-              <FormLabel htmlFor="first-name" fontFamily="Figtree, sans-serif;" id="first-name">
+              <FormLabel htmlFor="first-name" fontFamily="Figtree, sans-serif" id="first-name">
                 {t("input.control2")}
               </FormLabel>
               <Input
@@ -159,7 +159,7 @@ const Form = () => {
             </FormControl>
 
             <FormControl isRequired>
-              <FormLabel htmlFor="mail" fontFamily="Figtree, sans-serif;" id="mail">
+              <FormLabel htmlFor="mail" fontFamily="Figtree, sans-serif" id="mail">
                 {t("input.control3")}
               </FormLabel>
               <Input
@@ -174,7 +174,7 @@ const Form = () => {
             </FormControl>
 
             <FormControl isRequired>
-              <Text mb="8px" fontFamily="Figtree, sans-serif;">
+              <Text mb="8px" fontFamily="Figtree, sans-serif">
                 {t("input.control4")}
               </Text>
               <FormLabel htmlFor="message">
@@ -193,7 +193,7 @@ const Form = () => {
               type="submit"
               variant="outline"
               borderColor="#355995"
-              fontFamily="Figtree, sans-serif;"
+              fontFamily="Figtree, sans-serif"
             >
               {t("button")}
             </Button>
@@ -201,7 +201,7 @@ const Form = () => {
         </form>
         <Hide below="lg">
           <Image
-            src="../cocktail5.webp"
+            src="/cocktail5.webp"
             alt="decoration image of a cocktail"
             w="100px"
             h="150px"
@@ -212,35 +212,35 @@ const Form = () => {
       {/* <Image src="../frise-logo.png" w="500px" h="150px" /> */}
       <Flex gap={{ base: "3", md: "9" }} mt={4}>
         <Image
-          src="../bird1.webp"
+          src="/bird1.webp"
           alt="decoration image of a bird"
           w={{ base: "80px", lg: "100px" }}
           h={{ base: "80px", md: "120px" }}
           loading="lazy"
         />
         <Image
-          src="../frise-cocktail1.webp"
+          src="/frise-cocktail1.webp"
           alt="decoration image of a cocktail"
           w={{ base: "80px", lg: "100px" }}
           h={{ base: "80px", md: "120px" }}
           loading="lazy"
         />
         <Image
-          src="../frise-cocktail2.webp"
+          src="/frise-cocktail2.webp"
           alt="decoration image of a cocktail"
           w={{ base: "80px", lg: "100px" }}
           h={{ base: "80px", md: "120px" }}
           loading="lazy"
         />
         <Image
-          src="../frise-cocktail3.webp"
+          src="/frise-cocktail3.webp"
           alt="decoration image of a cocktail"
           w={{ base: "80px", lg: "100px" }}
           h={{ base: "80px", md: "120px" }}
           loading="lazy"
         />
         <Image
-          src="../bird2.webp"
+          src="/bird2.webp"
           alt="decoration image of a bird"
           w={{ base: "80px", lg: "100px" }}
           h={{ base: "80px", md: "120px" }}
