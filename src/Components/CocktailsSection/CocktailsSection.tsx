@@ -78,14 +78,14 @@ const CocktailDetails = ({
       alignItems="center"
       bg={colorTheme}
     >
-    
+
       <Image src={brandLogo} alt={brand} height="150px" width="300px" m={5} />
-      
+
       <Flex
         flexDirection={{ base: "column", xl: "row" }}
         gap={{ base: 10, lg: 0 }}
         alignItems={{ base: "center", xl: "flex-start" }}
-        
+
       >
         <Flex px={10}  >
           <SlideFade
@@ -119,7 +119,7 @@ const CocktailDetails = ({
               <Flex gap={5} alignItems="center" justifyContent="center" p={4} mt="10px" flexWrap="wrap">
                 {products.map((product, index) => (
                   <Flex alignItems="center" direction={{base:"column",md:"column"}} key={product.key}>
-                    {product.icon} 
+                    {product.icon}
                     <Text borderRadius="5px" p={3} color={colorText}>
                       {product.name}
                     </Text>
@@ -158,7 +158,7 @@ const CocktailDetails = ({
               </Button>
               </Flex>
               )}
-              
+
               </Flex>
             </Flex>
           </SlideFade>
@@ -178,7 +178,7 @@ const CocktailDetails = ({
               key={index}
               src={image}
               alt={image}
-             
+
               w={{base:"450px", md:"350px"}}
               h={{base:"350px", md:"300px"}}
             />
@@ -211,33 +211,33 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Blanco 40% | 70cl / 100cl",
-            icon: <Image src="../../aluzar-blanco.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco"/>,
+            icon: <Image src="/aluzar-blanco.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco"/>,
             key: "1"
           },
           {
             name: "Blanco Alta Graduación 50% | 70cl",
-            icon: <Image src="../../aluzar-blanco-alta.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco Alta Graduación"/>,
+            icon: <Image src="/aluzar-blanco-alta.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Blanco Alta Graduación"/>,
             key: "2"
           },
           {
             name: "Reposado 40% | 70cl / 100cl",
-            icon: <Image src="../../aluzar-reposado.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Reposado"/>,
+            icon: <Image src="/aluzar-reposado.webp" w="45px" loading="lazy" alt= "image d'une bouteille de tequila ALuzar Reposado"/>,
             key: "3"
           },
-         
+
         ]}
-        
-       
+
+
         texts={[
           t("aluzar.texts.text1"),
           t("aluzar.texts.text2"),
           t("aluzar.texts.text3"),
-          
+
         ]}
-        carouselImages={["../aluzar3.webp", "../aluzar4.webp", "../aluzar2.webp"]}
-        mainImage="./aluzar15.webp"
+        carouselImages={["/aluzar3.webp", "/aluzar4.webp", "/aluzar2.webp"]}
+        mainImage="/aluzar15.webp"
         mainImageSize="400px"
-        brandLogo="../logo-aluzar.webp"
+        brandLogo="/logo-aluzar.webp"
       />
 
       <CocktailDetails
@@ -250,42 +250,42 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Ensamble (Espadin & Barril) 42% | 70cl / 100cl",
-            icon: <Image src="../../espadin.webp" w="125px" loading="lazy" alt= "image d'une bouteille de espadin"/>,
+            icon: <Image src="/espadin.webp" w="125px" loading="lazy" alt= "image d'une bouteille de espadin"/>,
             key: "4"
           },
           {
             name: "Tepeztate 47% | 70cl",
-            icon: <Image src="../../tepeztate.webp" w="125px" loading="lazy" alt= "image d'une bouteille de Tepeztate"/>,
+            icon: <Image src="/tepeztate.webp" w="125px" loading="lazy" alt= "image d'une bouteille de Tepeztate"/>,
           key: "5"
           },
           {
             name: "Cuishe 47% | 70cl",
-            icon: <Image src="../../cuishe.webp" w="125px" loading="lazy" alt="image d'une bouteille de cuishe "/>,
+            icon: <Image src="/cuishe.webp" w="125px" loading="lazy" alt="image d'une bouteille de cuishe "/>,
             key: "6"
           },
           {
             name: "Tobala 47% | 70cl",
-            icon: <Image src="../../tobala.webp" w="125px" loading="lazy" alt= "image d'une bouteille de Tobala "/>,
+            icon: <Image src="/tobala.webp" w="125px" loading="lazy" alt= "image d'une bouteille de Tobala "/>,
             key: "7"
           },
             {
-           
-            icon: <Image src="./awards-mezcal.webp" w="400px" loading="lazy" alt= "award "/>,
+
+            icon: <Image src="/awards-mezcal.webp" w="400px" loading="lazy" alt= "award "/>,
             key: "8"
           },
         ]}
-       
-       
+
+
         texts={[
           t("banhez.texts.text1"),
           t("banhez.texts.text2"),
           t("banhez.texts.text3"),
           t("banhez.texts.text4"),
         ]}
-        carouselImages={["../Banhez2.webp", "../Banhez3.webp", "../Banhez4.webp"]}
-        mainImage="./Banhez1.webp"
+        carouselImages={["/Banhez2.webp", "/Banhez3.webp", "/Banhez1.webp"]}
+        mainImage="/Banhez1.webp"
         mainImageSize="400px"
-        brandLogo="../banhez-logo.webp"
+        brandLogo="/banhez-logo.webp"
       />
       <CocktailDetails
         colorTheme="#F4B473"
@@ -297,12 +297,12 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "ODVI 42% | 70cl / 75cl / 100cl",
-            icon: <Image src="../../odvi-bottle1.webp" w="125px" color="blue" loading="lazy" alt= "image d'une bouteille d'ODVI "/>,
+            icon: <Image src="/odvi-bottle1.webp" w="125px" color="blue" loading="lazy" alt= "image d'une bouteille d'ODVI "/>,
             key: "9"
           },
           {
             name: "ODVI Blanche 45% | 70cl / 75cl",
-            icon: <Image src="../../odvi-bottle2.webp" w="125px" color="blue"loading="lazy" alt="image d'une bouteille d'ODVI blanche "/>,
+            icon: <Image src="/odvi-bottle2.webp" w="125px" color="blue"loading="lazy" alt="image d'une bouteille d'ODVI blanche "/>,
             key: "10"
           },
         ]}
@@ -311,12 +311,12 @@ export const CocktailsSection = () => {
           t("odvi.texts.text2"),
           t("odvi.texts.text3"),
           t("odvi.texts.text4"),
-          
+
         ]}
-        carouselImages={["../ODVI2.webp", "../ODVI3.webp", "../ODVI4.webp"]}
-        mainImage="../ODVI1.webp"
+        carouselImages={["/ODVI2.webp", "/ODVI3.webp", "/ODVI4.webp"]}
+        mainImage="/ODVI1.webp"
         mainImageSize="400px"
-        brandLogo="../odvi-logo.webp"
+        brandLogo="/odvi-logo.webp"
       />
       <CocktailDetails
         colorTheme="#F1F1F1"
@@ -328,7 +328,7 @@ export const CocktailsSection = () => {
         products={[
           {
             name: "Joven 40% | 70cl",
-            icon: <Image src="../../libelula-bottle.webp" w="35px" color="blue" loading="lazy" alt="image d'une bouteille de Joven "/>,
+            icon: <Image src="/libelula-bottle.webp" w="35px" color="blue" loading="lazy" alt="image d'une bouteille de Joven "/>,
             key: "11"
           },
         ]}
@@ -337,19 +337,19 @@ export const CocktailsSection = () => {
           t("libelula.texts.text2"),
           t("libelula.texts.text3"),
           t("libelula.texts.text4"),
-          
+
         ]}
         carouselImages={[
-          "../libelula2.webp",
-          "../libelula3.webp",
-          "../libelula4.webp",
+          "/libelula2.webp",
+          "/libelula3.webp",
+          "/libelula4.webp",
         ]}
-        mainImage="../libelula1.webp"
+        mainImage="/libelula1.webp"
         mainImageSize="400px"
-        brandLogo="../libelula-logo.webp"
+        brandLogo="/libelula-logo.webp"
       />
-      
-      
+
+
     </section>
   );
 };

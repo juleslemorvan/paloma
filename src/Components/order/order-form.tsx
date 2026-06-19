@@ -70,9 +70,9 @@ export function OrderForm() {
     CATALOG.forEach((brand) => {
       const bl: string[] = []
       brand.s.forEach((p) =>
-        p.sz.forEach((sz) => {
-          const q = qty[key(p.n, sz)]
-          if (q) bl.push(`  • ${p.n} ${sz}: *${q}x*`)
+        p.sz.forEach((s) => {
+          const q = qty[key(p.n, s.label)]
+          if (q) bl.push(`  • ${p.n} ${s.label}: *${q}x*`)
         }),
       )
       if (bl.length) {
@@ -98,7 +98,16 @@ export function OrderForm() {
 
     const items = Object.entries(qty).map(([k, q]) => {
       const [name, size] = k.split('||')
-      return { name, size, qty: q }
+      let moloniRef = ''
+      for (const brand of CATALOG) {
+        for (const prod of brand.s) {
+          if (prod.n === name) {
+            const sizeObj = prod.sz.find((s) => s.label === size)
+            if (sizeObj) { moloniRef = sizeObj.moloniRef; break }
+          }
+        }
+      }
+      return { name, size, qty: q, moloniRef }
     })
     fetch('/api/order', {
       method: 'POST',

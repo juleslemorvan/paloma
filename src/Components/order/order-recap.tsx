@@ -16,7 +16,7 @@ export function OrderRecap({
   const brands = CATALOG.map((brand) => {
     const rows = brand.s.flatMap((prod) =>
       prod.sz
-        .map((sz) => ({ name: prod.n, sz, q: qty[key(prod.n, sz)] || 0 }))
+        .map((s) => ({ name: prod.n, sz: s.label, q: qty[key(prod.n, s.label)] || 0 }))
         .filter((r) => r.q > 0),
     )
     return { name: brand.b, rows }

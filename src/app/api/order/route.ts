@@ -13,6 +13,24 @@ function gql(query: string, variables?: Record<string, unknown>) {
   }).then((r) => r.json());
 }
 
+async function resolveProductId(companyId: number, ref: string): Promise<number | null> {
+  const res = await gql(
+    `
+    query($companyId: Int!, $ref: String!) {
+      products(companyId: $companyId, options: {
+        search: { field: reference, value: $ref }
+        pagination: { page: 1, qty: 1 }
+      }) {
+        data { productId reference }
+      }
+    }
+  `,
+    { companyId, ref },
+  )
+  const product = res?.data?.products?.data?.[0]
+  return product?.reference === ref ? product.productId : null
+}
+
 async function findOrCreateCustomer(
   companyId: number,
   tel: string,
@@ -77,26 +95,54 @@ export async function POST(req: Request) {
       bar: string;
       tel: string;
       notes: string;
-      items: { name: string; size: string; qty: number }[];
+      items: { name: string; size: string; qty: number; moloniRef: string }[];
     };
 
     const companyId = Number(process.env.MOLONI_COMPANY_ID);
     const documentSetId = Number(process.env.MOLONI_DOCUMENT_SET_ID);
+    const fallbackId = Number(process.env.MOLONI_GENERIC_PRODUCT_ID);
 
-    const customerId = await findOrCreateCustomer(companyId, tel, bar);
+    const [customerId, refToId] = await Promise.all([
+      findOrCreateCustomer(companyId, tel, bar),
+      (async () => {
+        const uniqueRefs = Array.from(new Set(items.map((i) => i.moloniRef).filter(Boolean)));
+        const entries = await Promise.all(
+          uniqueRefs.map(async (ref) => {
+            const id = await resolveProductId(companyId, ref);
+            return [ref, id ?? fallbackId] as [string, number];
+          }),
+        );
+        return Object.fromEntries(entries);
+      })(),
+    ]);
 
-    const today = new Date().toISOString();
+    const today = new Date().toISOString().split("T")[0];
     const expiration = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000)
       .toISOString()
       .split("T")[0];
 
     const products = items.map((item, i) => ({
-      productId: Number(process.env.MOLONI_GENERIC_PRODUCT_ID),
+      productId: (item.moloniRef && refToId[item.moloniRef]) || fallbackId,
       qty: item.qty,
       ordering: i + 1,
       name: `${item.name} ${item.size}`,
       price: 0,
     }));
+
+    const payload = {
+      companyId,
+      data: {
+        documentSetId,
+        customerId,
+        date: today,
+        expirationDate: expiration,
+        status: 1,
+        notes: notes?.trim() ? `${bar} — ${notes.trim()}` : bar,
+        yourReference: `WA-${Date.now()}`,
+        products,
+      },
+    };
+    console.log("[Moloni] purchaseOrderCreate payload:", JSON.stringify(payload, null, 2));
 
     const res = await gql(
       `
@@ -107,20 +153,9 @@ export async function POST(req: Request) {
         }
       }
     `,
-      {
-        companyId,
-        data: {
-          documentSetId,
-          customerId,
-          date: today,
-          expirationDate: expiration,
-          status: 1,
-          notes: notes?.trim() ? `${bar} — ${notes.trim()}` : bar,
-          yourReference: `WA-${Date.now()}`,
-          products,
-        },
-      },
+      payload,
     );
+    console.log("[Moloni] purchaseOrderCreate response:", JSON.stringify(res, null, 2));
 
     // top-level GraphQL errors (schema validation failures)
     if (res?.errors?.length > 0) {

@@ -54,7 +54,7 @@ export function BrandSection({
   onChange: (k: string, delta: number) => void
 }) {
   const count = brand.s.reduce(
-    (acc, p) => acc + p.sz.reduce((a, sz) => a + (qty[key(p.n, sz)] || 0), 0),
+    (acc, p) => acc + p.sz.reduce((a, s) => a + (qty[key(p.n, s.label)] || 0), 0),
     0,
   )
 
@@ -89,14 +89,14 @@ export function BrandSection({
                 {prod.n}
               </div>
               <div className="mb-2 text-[10px] tracking-[1px] text-terracotta">{prod.a}</div>
-              {prod.sz.map((sz) => {
-                const k = key(prod.n, sz)
+              {prod.sz.map((s) => {
+                const k = key(prod.n, s.label)
                 return (
                   <div
-                    key={sz}
+                    key={s.label}
                     className="flex items-center justify-between border-t border-plum/10 py-1.5 first:border-t-0"
                   >
-                    <span className="flex-1 text-[12px] tracking-[0.5px] text-plum/70">{sz}</span>
+                    <span className="flex-1 text-[12px] tracking-[0.5px] text-plum/70">{s.label}</span>
                     <QtyControl value={qty[k] || 0} onChange={(d) => onChange(k, d)} />
                   </div>
                 )
