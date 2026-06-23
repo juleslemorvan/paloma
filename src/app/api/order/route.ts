@@ -125,7 +125,6 @@ export async function POST(req: Request) {
       productId: (item.moloniRef && refToId[item.moloniRef]) || fallbackId,
       qty: item.qty,
       ordering: i + 1,
-      name: `${item.name} ${item.size}`,
       price: 0,
     }));
 
