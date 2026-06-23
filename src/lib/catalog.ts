@@ -27,30 +27,30 @@ export const CATALOG: Brand[] = [
   },
   {
     b: 'Tequila Tobien',
-    s: [{ n: 'Tequila Tobien Blanco', a: '35°ABV', sz: [{ label: '70 cl', moloniRef: '0006' }] }],
+    s: [{ n: 'Tequila Tobien Blanco', a: '35°ABV', sz: [{ label: '70 cl', moloniRef: '0006' }, { label: '5 L', moloniRef: '0019' }] }],
   },
   {
     b: 'Tequila Cascahuin',
     s: [
       { n: 'Cascahuin Blanco', a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0007' }] },
-      { n: 'Cascahuin Reposado', a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0008' }] },
-      { n: 'Cascahuin Anejo', a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0009' }] },
-      { n: 'Cascahuin Plata', a: '48°ABV', sz: [{ label: '70 cl', moloniRef: '0010' }] },
-      { n: 'Cascahuin Tahona', a: '42°ABV', sz: [{ label: '70 cl', moloniRef: '0011' }] },
+      { n: 'Cascahuin Reposado', a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0015' }] },
+      { n: 'Cascahuin Anejo', a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0016' }] },
+      { n: 'Cascahuin Plata', a: '48°ABV', sz: [{ label: '70 cl', moloniRef: '0018' }] },
+      { n: 'Cascahuin Tahona', a: '42°ABV', sz: [{ label: '70 cl', moloniRef: '0017' }] },
     ],
   },
   {
     b: 'Mezcal Banhez',
     s: [
-      { n: 'Banhez Mezcal Ensamble', a: '42°ABV', sz: [{ label: '70 cl', moloniRef: '0012' }, { label: '1 L', moloniRef: '0013' }] },
-      { n: 'Banhez Mezcal Cuishe', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0014' }] },
-      { n: 'Banhez Mezcal Tobala', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0015' }] },
-      { n: 'Banhez Mezcal Tepeztate', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0016' }] },
+      { n: 'Banhez Mezcal Ensamble', a: '42°ABV', sz: [{ label: '70 cl', moloniRef: '0008' }, { label: '1 L', moloniRef: '0009' }] },
+      { n: 'Banhez Mezcal Cuishe', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0011' }] },
+      { n: 'Banhez Mezcal Tobala', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0010' }] },
+      { n: 'Banhez Mezcal Tepextate', a: '47°ABV', sz: [{ label: '70 cl', moloniRef: '0012' }] },
     ],
   },
   {
     b: 'Combier Triple Sec',
-    s: [{ n: "Combier Triple Sec L'Original", a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0017' }, { label: '3 L', moloniRef: '0018' }] }],
+    s: [{ n: "Combier Triple Sec L'Original", a: '40°ABV', sz: [{ label: '70 cl', moloniRef: '0014' }, { label: '3 L', moloniRef: '0013' }] }],
   },
 ]
 
